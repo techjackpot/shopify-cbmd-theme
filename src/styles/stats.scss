@@ -1,0 +1,170 @@
+.Highlights_stats_container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	@include for-large-desktop {    
+		max-width: $large-desktopview;
+		margin: 0 auto;
+	}
+
+	@include for-tablet {    
+		display: block;
+		padding-top: 56px;
+	}			
+
+	@include for-phone {    
+		display: block;
+		padding-top: 40px;		
+		padding-bottom: 24px;
+	}			
+
+	.Highlights_first {
+		margin-right: 135px;
+		margin-left: 85px;
+
+		@include for-tablet {    
+			width: 100%;
+			margin-left: 0px;
+			margin-left: 0px;
+			max-width: 100%;
+			padding-right: 87px;
+		}			
+
+		@include for-phone {    
+			width: 100%;
+			max-width: 100%;
+			margin-left: 0px;
+		}			
+
+		
+		.Highlights_heading {
+			@extend %text-16-600;
+			color: $red-color;
+		}
+		.Highlights_title {
+			@extend %text-48-600;
+			color: $black-color;
+			margin-bottom: 15px;
+
+			@include for-tablet {    
+				font-size: 38px;
+				line-height: 38px;
+				br {
+					display: none;
+				}
+			}	
+
+			@include for-phone {    
+				font-size: 32px;
+				line-height: 32px;
+				br {
+					display: none;
+				}
+				
+			}	
+
+		}
+		.Highlights_description {
+			@extend %text-22-300;
+			color: $black-color;	
+			margin-bottom: 24px;
+			max-width: 657px;
+
+			@include for-tablet {    
+				font-size: 18px;
+				line-height: 24px;
+			}						
+			@include for-phone {    
+				font-size: 18px;
+				line-height: 24px;
+
+			}
+		}
+		.Highlights_subtitle {
+			@extend %text-16-500;
+			color: $black-color;					
+		}
+	}
+
+	.Highlights_second {
+
+		width: 261px;
+
+		@include for-tablet {    
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			margin-top: 56px;
+		}	
+
+		@include for-phone {    
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			margin-top: 40px;
+		}
+
+		.collections {
+			margin: 0 auto;
+			border-top: 1px solid $ash-color;
+		    text-align: center;
+		    padding: 15px 0px;	
+			transition: all 0.8s ease;
+
+			@include for-tablet {    
+				padding: 15px 0px;
+				margin: 0;
+				width: 30%;
+				min-width: 196px;
+			}	
+
+			@include for-phone {    
+				padding: 15px 0px;
+				margin: 0px;
+				width: 30%;
+				min-width: 94px;
+				max-width: 140px;
+			}
+
+		    H3 {
+		    	@extend %text-32-300;
+		    	margin-bottom: 10px;
+
+				@include for-tablet {    
+					font-size: 28px;
+					line-height: 28px;
+				}						
+
+				@include for-phone {    
+					font-size: 24px;
+					line-height:24px;
+				}						
+		    }
+
+		    p {
+		    	@extend %text-18-300;
+		    	margin-bottom: 0px;
+		    	width: 261px;
+				@include for-tablet {    
+					font-size: 16px;
+					line-height: 18px;
+					letter-spacing: -0.01em;
+					width: 100%;
+				}						
+
+				@include for-phone {    
+					font-size: 12px;
+					line-height: 14px;
+					letter-spacing: -0.01em;
+					width: 100%;
+					br {
+						display: none;
+					}
+				}	
+
+		    }
+		}
+	}
+}

@@ -1,0 +1,117 @@
+.cbmd_slider_rect_container {
+	@include for-phone {			
+		padding-bottom: 30px;
+	}
+	@media (max-width: 1240px) { 
+		padding-right: 0px;
+	}
+
+	.title {
+		@extend %text-48-600;
+		color: $black-color;
+		margin-bottom: 64px;
+		@include for-tablet {    
+			font-size: 38px;
+			line-height: 38px;
+			letter-spacing: -0.03em;		
+
+		}
+		@include for-phone {			
+			font-size: 32px;
+			line-height: 32px;
+			letter-spacing: -0.03em;
+			margin-bottom: 42px;
+		}
+
+	}
+	.cbmd_slider_rec_items {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		.slick-slide:not(.slick-active) {
+		    opacity: 0.5;
+		}
+
+		.item {
+			width: 360px;
+			margin-right: 45px;
+			@include for-tablet {    
+				width: 342px;
+				margin-right: 32px;
+			}
+			@include for-phone {			
+				width: 312px;
+				margin-right: 32px;
+			}
+
+			&:last-child {
+				margin-right: 0px;
+			}
+
+			.image_area {
+				.image {
+					width: 360px;
+					height: 240px;
+					background-size: cover;
+					background-repeat: no-repeat;
+
+					@include for-tablet {    
+						width: 342px;
+					}
+					@include for-phone {			
+						width: 312px;
+					}
+
+				}
+			}
+
+			.content {
+				margin-top: 36px;
+				padding-bottom: 10px;
+				@include for-phone {    
+					padding-bottom: 10px;
+				}
+
+				.name {
+					@extend %text-16-600;
+					color: $red-color;
+					margin-bottom: 16px;
+				}
+
+				.description {
+					padding-top: 16px;
+					@extend %text-22-300;
+					color: $black-color;
+					border-top: 1px solid #DCDCDC;
+					@include for-tablet {    
+						font-size: 18px;
+						line-height: 24px;
+						/* height: 130px; */
+					}
+					@include for-phone {    
+						font-size: 18px;
+						line-height: 24px;
+					}
+
+				}
+
+				.read_more {
+					a {
+						@extend %text-16-normal;
+						color: $black-color;
+						position: relative;
+						padding: 2px;
+						&::after {
+							background: $gray-color;
+						}
+
+					}
+
+				}
+				
+			}
+
+		}
+	}
+}

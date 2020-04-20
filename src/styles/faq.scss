@@ -1,0 +1,153 @@
+.cbmd_faq_container {
+	.title {
+		@extend %text-48-600;
+		color: $black-color;
+		margin-bottom: 64px;
+
+		@include for-tablet {    
+			margin-bottom: 56px;
+			font-size: 38px;
+			line-height: 38px;
+
+		}
+
+		@include for-phone {    
+			margin-bottom: 40px;
+			font-size: 32px;
+			line-height: 32px;
+		}
+
+	}
+
+	.faq_area {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+
+		@include for-tablet {    
+			display: block;
+		}
+
+		@include for-phone {    
+			display: block;
+		}
+
+		.faq_item {
+			margin-right: 36px;
+			width: 50%;
+
+			&:last-child {
+				margin-right: 0px;
+			}
+
+			@include for-tablet {    
+				width: 100%;
+
+				&:last-child {
+					margin-top: 76px;
+				}
+
+			}
+
+			@include for-phone {    
+				width: 100%;
+				&:last-child {
+					margin-top: 56px;
+				}				
+			}
+
+			.sub_title {
+				@extend %text-16-600;
+				color: $red-color;	
+				margin-bottom: 36px;
+				
+				@include for-tablet {    
+					margin-bottom: 36px;		
+				}
+
+				@include for-phone {    
+					margin-bottom: 24px;		
+				}
+
+			}
+			.faq_container {
+				.item {
+					border-top: 1px solid #E2E2E2;
+					&:last-child {
+						border-bottom: 1px solid #E2E2E2;
+					}
+					position: relative;
+					.content {
+						.item_controller {
+							display: flex;
+							/* align-items: center; */
+							justify-content: space-between;
+							cursor: pointer;					
+
+							.item_name {
+								@extend %text-22-300;
+								color: $black-color;
+								padding: 19px 0px;
+								transition: font-weight .1s linear;
+
+								@include for-tablet {    
+									font-size: 18px;
+									line-height: 24px;
+									letter-spacing: -0.03em;
+								}
+
+								@include for-phone {    
+									font-size: 18px;
+									line-height: 24px;
+									letter-spacing: -0.02em;
+								}
+
+							}
+							.action {
+								cursor: pointer;
+								font-size: 14px;
+								font-weight: 500;
+								width: 20px;
+								text-align: center;
+							    align-items: flex-start;
+							    text-align: center;
+							    padding-top: 20px;											    
+							}													
+						}
+
+						.collapsable {
+							display: none;
+							.item_desc {
+								@extend %text-16-normal;
+								margin-bottom: 12px;
+								color: $charcoal-color;
+							}
+							.item_link {
+								@extend %text-16-normal;
+								margin-bottom: 24px;
+							}
+						}
+					}
+					.collapsed {
+						.item_controller {
+							.item_name {
+								font-weight: 600;
+								padding-bottom: 12px;
+							}											
+						}
+					}
+
+					.minify {
+						display: none;
+					}
+
+					.expand_area {
+						display: none;
+					}
+
+				}
+			}
+		}
+	}
+
+}

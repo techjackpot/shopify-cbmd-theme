@@ -1,0 +1,198 @@
+#section-cbmd-collections-overview {
+	overflow: hidden;
+	.Highlights_products_container {
+		padding-bottom: 0px;
+		.Highlights_products {
+			.Highlights_products_items {
+				.Highlights_products_item {
+					.Highlights_products_content {
+						.Highlights_products_exp{
+							height: 112px;
+						}
+						.tab_line {
+							width: 100%;
+							height: 14px;
+							background: $red-color;
+							margin-top: 50px;
+							transition: opacity 1s;	
+							transition-timing-function: linear;
+						}
+					}
+				}
+			}
+		}
+	}
+	.collecton_views {
+		overflow: hidden;
+		.collection_view {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			background: linear-gradient(90deg, #ccc 0%, #ddd 100%);
+			padding-left: 64px;			
+			height: 840px;
+			transition: opacity 1s;	
+			transition-timing-function: linear;
+			@include for-tablet {
+				background: $white-color;
+				padding-left: 0px;			
+				height: 850px;
+			}  
+
+			@include for-phone {
+				background: $white-color;
+				padding-left: 0px;			
+
+			}  
+
+			.collection_item {
+				.highlight_image {
+					height: 100%;
+					position: absolute;
+					right:0;
+
+					@include for-phone {
+						object-fit: cover;
+					}
+				}
+
+
+				@include for-tablet {
+					height: 350px;
+					background: linear-gradient(90deg, #ccc 0%, #ddd 100%);
+					padding-left: 36px;
+					position: relative;
+				}  
+
+				@include for-phone {    
+					height: 300px;
+					padding-left: 24px;
+					background: linear-gradient(90deg, #ccc 0%, #ddd 100%);
+					position: relative;
+				}  
+
+				.collection_content {
+					
+					padding-top: 64px;
+					z-index: 2;
+					position: relative;
+					@include for-large-desktop {    
+						max-width: $large-desktopview;
+						margin: 0 auto;
+						padding-left: 36px;
+					}
+					@include for-tablet {    
+						max-width: 360px;
+						padding-top: 56px;
+					}  
+
+					@include for-phone {
+						padding-top: 40px;
+						max-width: 256px;
+					}
+
+					.collection_title {
+						max-width: 460px;
+						@extend %text-48-600;
+						margin-bottom: 16px;
+						@include for-phone {
+							font-size: 32px;
+							line-height: 32px;
+						}
+					}
+					.collection_description {
+						max-width: 460px;
+						@extend %text-22-300;
+						margin-bottom: 64px;
+						@include for-phone {
+							font-size: 18px;
+							line-height: 24px;
+							letter-spacing: -0.02em;
+						}						
+					}
+
+
+				}
+	
+			}
+
+			.collection_products {
+				@include for-large-desktop {    
+					max-width: $large-desktopview;
+					margin: 0 auto;
+					padding-left: 36px;
+				}
+
+				@include for-tablet {    
+					position: initial;
+					margin-top: 56px;
+					padding-left: 36px;
+				}  
+
+				@include for-phone {    
+					position: initial;
+					margin-top: 40px;
+					padding-left: 24px;
+				}
+
+				.collection_label {
+					@extend %text-16-600;
+					color: $red-color;
+					margin-bottom: 24px;
+				}
+				.collection_notify {
+					margin-top: 56px;
+					@include for-tablet {    
+						margin-top: 40px;
+					} 					
+					@include for-phone {    
+						margin-top: 40px;
+					}  						
+				}
+				.collection_items {
+					display: flex;
+					align-items: center;
+					z-index: 1;
+					.collection_product {
+						padding: 20px;
+						background: $white-color;
+						margin-right: 24px;
+						width: 204px;
+						height: 274px;
+						&:last-child {
+							margin-right: 0px;
+						}
+						@include for-tablet {    
+							background: rgba(164, 164, 164, 0.08);
+						}  						
+						@include for-phone {    
+							background: rgba(164, 164, 164, 0.08);
+						}  								
+						a {
+							h1 {
+								@extend %text-20-600;
+								margin-bottom: 0px;
+							}
+							p {
+								@extend %text-20-300;
+								margin-bottom: 16px;
+							}
+							.img_area {
+								text-align: center;
+								img {
+									width: 150px;
+								}							
+							}
+
+						}
+					}
+
+				}
+			}					
+
+		}	
+		.hide {
+			height: 0px;
+		}
+	}
+}

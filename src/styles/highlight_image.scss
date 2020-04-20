@@ -1,0 +1,456 @@
+.Highlights_image_container {
+	padding: 64px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;	
+
+	@include for-tablet {    
+		padding: 56px 0px;
+	}		
+
+	@include for-phone {    
+		padding: 40px 0px 24px 0px;
+	}		
+
+	.Highlights_item {
+		width: 50%;	
+
+		@include for-phone {    
+			padding-top: 40px;
+		}				
+
+		.Highlights_item_content {
+			.Highlights_heading {
+				@extend %text-16-600;
+				color: $red-color;
+			}
+			.Highlights_title {
+				@extend %text-48-600;
+				color: $black-color;
+				margin-bottom: 15px;
+
+				@include for-tablet {    
+					font-size: 38px;
+					line-height: 38px;
+				}		
+
+				@include for-phone {    
+					font-size: 32px;
+					line-height: 32px;
+				}
+			}
+			.Highlights_description {
+				@extend %text-22-300;
+				color: $black-color;
+
+				
+				@include for-tablet {    
+					font-size: 18px;
+					line-height: 24px;
+					br {
+						display: none;
+					}
+				}	
+
+				@include for-phone {    
+					font-size: 18px;
+					line-height: 24px;
+					br {
+						display: none;
+					}					
+				}
+							
+			}
+			.Highlights_action {
+				padding-top: 24px;
+
+				@include for-tablet {    
+					padding-top: 0px;
+				}						
+			}
+			.Highlights_subtitle {
+				@extend %text-16-500;
+				color: $black-color;					
+			}
+		}
+	}	
+}
+
+.Highlights_image_right {
+
+	@include for-phone {  
+		display: block;
+		flex-direction: column-reverse;
+	}		
+
+	.Highlights_second {
+		position: relative;
+		order: 2;
+		text-align: right;
+		max-height: 835px;
+		& > :first-child {
+			width: 100%;
+		}
+		&::before{
+		    content: "";
+		    display: block;
+		    padding-bottom: calc(100% / (622/560));
+			@include for-tablet {    
+			}				    
+			@include for-phone {    
+			}				    
+		}
+		
+		@include for-tablet {  
+		}
+
+
+		@include for-phone {    
+			padding-top: 0px;
+			width: 75%;
+			float: right;
+		}		
+
+		.highlight_image {
+
+			height: auto;
+			flex: 1;
+			border-radius: 417.5px 0px 0px 417.5px;		
+			object-fit: cover;
+			object-position: right;
+			width: 100%;
+			max-height: 835px;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    height: 100%;
+
+			@include for-tablet {  
+				width: 100%;  
+			}
+
+			@include for-phone {    
+				width: 100%;
+			}		
+		}
+	}	
+	.Highlights_first {
+		order: 1;
+		max-width: 460px;
+		clear: both;
+		margin-left: 64px;
+
+		@include for-large-desktop {    
+			max-width: 640px;
+			margin: 0 auto;
+			padding: 0px;
+		}		
+		@include for-tablet {    
+			padding: 0px 36px;
+			margin-left: 0px;
+		}
+
+		@include for-phone { 
+			width: 100%;
+			max-width: 100%;		 
+			margin-top: 40px;
+			margin-left: 0px;
+			padding: 40px 24px 0px 24px;
+		}			
+	}		
+}
+
+.Highlights_image_left {
+    display: flex;
+	align-items: center;
+	justify-content: space-between;	
+
+	@include for-phone {    
+		display: block;
+	}		
+
+	.Highlights_first {
+		position: relative;
+		max-height: 835px;
+		& > :first-child {
+			width: 100%;
+		}
+
+		&::before{
+		    content: "";
+		    display: block;
+		    padding-bottom: calc(100% / (622/560));
+			@include for-tablet {    
+			}				    
+			@include for-phone {    
+			}				    
+		}
+
+		@include for-tablet {  
+		}
+
+
+		@include for-phone {    
+			padding-top: 0px;
+			width: 75%;
+		}		
+
+		.highlight_image {
+
+			height: auto;
+			flex: 1;
+			object-fit: cover;
+			object-position: left;
+			width: 100%;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    height: 100%;
+		    max-height: 835px;
+			border-top-right-radius: 417.5px;
+			border-bottom-right-radius: 417.5px;		    
+
+			@include for-tablet {  
+				width: 100%;  
+			}
+
+			@include for-phone {    
+				width: 100%;
+			}		
+		}
+	}
+
+	.Highlights_second {
+
+		width:50%;
+		/* margin-right: 64px; */
+		/* padding: 0px 64px; */
+		padding-right: 64px;
+		padding-left: 112px;
+		@include for-large-desktop {    
+			max-width: 640px;
+			margin: 0 auto;
+			padding: 0px;
+		}
+		@include for-tablet {    
+			padding: 0px 36px;
+		}
+
+		@include for-phone {  
+			width: 100%;
+			max-width: 100%;
+
+			margin-top: 40px;
+			padding: 0px 24px;
+		}	
+	}	
+}
+
+
+.Highlights_image_background {
+	position: relative;
+	padding-top: 64px;
+	padding-bottom: 0px;
+
+	@include for-tablet {    
+		padding-top: 42px;
+	}
+
+	@include for-phone {    
+		padding-top: 0px;
+	}						
+
+	.Highlights_first {
+		display: flex;
+		width: 100%;
+
+		@include for-tablet {    
+			height: 720px;
+			position: relative;
+			overflow: hidden;
+		}		
+		@include for-phone {    
+			height: 640px;
+			position: relative;
+		}			
+
+		.highlight_image {
+			@extend %cover-image;
+		}
+
+		video {
+			width: 100%;
+			height: 100%;
+
+			@include for-tablet {    
+				width: auto;
+				height: 720px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				background-position: center;	
+			}	
+
+			@include for-phone {    
+			    object-fit: cover;
+			    object-position: top;			
+			}			
+		}
+	}	
+	.Highlights_second {
+	    position: absolute;
+	    transform: translate(0%, -50%);
+	    top: 50%;	
+	    right: 6.5625%;
+	    /* padding: 100px; */
+	    max-width: 360px;
+
+		@include for-tablet {    
+			left: 36px;
+			top: 117px;
+			transform: none;
+			width: 100%;
+			max-width: 523px;
+		}
+
+		@include for-phone {    
+			top: 40px;
+			transform: none;
+			width: 100%;
+			margin: 0 auto;
+			/* transform: translate(50%, 0%); */
+			left: 0px;
+			padding: 0px 24px;
+			max-width: 100%;
+			padding-top: 40px;
+		}	 
+
+		.Highlights_item_content {
+		    .Highlights_heading {
+		    	color: $black-color;
+		    }
+		    .Highlights_video_description {
+		    	@extend %text-16-normal;
+		    }
+			.video_play_controller_area {
+				cursor: pointer;
+				display:flex;
+				align-items: center;
+
+				p {
+					margin-left: 12px;
+					@extend %text-16-500;
+				}	
+			}		    
+		    .Highlights_subscriber {
+		    	display: flex;
+		    	align-items: flex-end;
+
+		    	@include for-phone { 
+		    		width: 100%;
+		    	}
+
+		    	.Form__Input {
+		    		border: none;
+		    		border-bottom:1px solid $black-color;
+		    		@extend %text-16-300;
+		    	}
+		    }
+		}
+
+	}
+}
+
+.page-our-mission {
+	.Highlights_image_background {
+		padding-top: 0px;
+		margin-top: 64px;
+		.videooverlay {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			z-index: 1;
+			background: rgb(228,229,232);
+			background: linear-gradient(90deg, rgba(228,229,232,1) 0%, rgba(177,177,181,1) 100%);
+			opacity: 0.6;
+		}	
+		.Highlights_item {
+			@include for-phone {    
+				padding-top: 0px;
+			}		
+
+			.Highlights_item_content {
+				.Highlights_title {
+					color: $black-color;
+				}
+				.Highlights_heading {
+					color: $black-color;
+				}
+				.Highlights_video_description {
+					color: $black-color;
+				}
+				.Highlights_heading {
+					color: $black-color;
+				}
+				.video_play_controller_area {
+					color: $white-color;
+				   	&:hover {
+				   		opacity: 0.48;
+				   	}
+				   	&:focus {
+				   		opacity: 0.64;
+				   	}
+				   	p {
+				   		color: $black-color;
+				   	}
+
+				}
+			}
+		}
+		.Highlights_first {
+			z-index: 0;
+		}
+		.Highlights_second {
+			@include for-large-desktop {    
+				max-width: 640px;
+			}		
+
+			z-index: 2;
+			@include for-phone {    
+				top: 50%;
+				transform: translate(0%, -50%);
+			}		
+
+		}		
+	}
+}
+
+#section-cbmd-highlight-image-ourscience {
+	.Highlights_image_left {
+		.Highlights_first {
+			.highlight_image{
+				object-position: right;
+			}
+		}
+	} 
+}
+.page-our-mission {
+	#section-cbmd-highlight-image-1 {
+		.Highlights_image_left {
+
+		}
+	}
+}
+
+#shopify-section-cbmd-highlight-image-2 {
+	.Highlights_image_right {
+		.Highlights_second{
+			.highlight_image {
+				object-position: center;
+			}
+		}
+	}  
+}

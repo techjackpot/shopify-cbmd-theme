@@ -1,0 +1,168 @@
+.cbmb_tab_container {
+	@include for-phone {
+		padding-right: 0px;
+	}					
+
+	.Timeline {
+		box-shadow: none;
+		.Timeline__Nav {
+			margin-top: 0px;
+			.Timeline_Overlay {
+				height: 30px;
+				width: 70px;
+				wit: 100%;
+				bottom: 30px;
+				position: absolute;
+				right: 0;
+				background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fff 100%);
+				z-index: 2;			
+				pointer-events: none;
+			}
+			.Timeline__NavWrapper {
+				text-align: left;
+				overflow: inherit;
+
+				@include for-phone {
+					min-height: 95px;
+					overflow-x: auto;
+					overflow-y: hidden;
+				}					
+
+				.Timeline__NavItem {
+					z-index: 1;
+					padding-left: 0px;
+					padding-right: 0px;
+					margin-right: 20px;
+					@extend %text-16-500;
+					letter-spacing: 0;
+					color: $black-color;
+
+					&::after {
+						width: calc(100%);
+						height: 4px;
+						bottom: -8px;
+						left: 0px;
+						background: $red-color;
+
+						@include for-phone {
+							bottom: 4px;
+						}								
+					}
+				}
+			}
+		}
+		.Timeline__ListItem {
+			max-width: 100%;
+			margin-top: 64px;
+			@include for-tablet {
+				margin-top: 56px;
+			}					
+
+			@include for-phone	 {
+				margin-top: 40px;
+			}		
+
+			.Timeline__Item {
+
+				align-items: flex-start;
+
+				@include for-tablet {
+					display: block;
+				}					
+				@include for-phone {
+					display: block;
+					padding-right: 24px;
+				}			
+
+				.Timeline__Inner {
+					padding: 0px 64px 0px 0px;
+					@include for-tablet {
+						width: 100%;
+					}			
+					@include for-phone {
+						width: 100%;
+						padding-right: 0px;
+					}		
+					.Timeline__Header {
+						.SectionHeader__SubHeading {
+							@extend %text-48-600;
+							color: $black-color;
+							margin-bottom: 16px;
+
+							@include for-tablet {
+								font-size: 38px;
+								line-height: 38px;
+								letter-spacing: -0.03em;
+							}					
+
+							@include for-phone {
+								font-size: 32px;
+								line-height: 32px;
+								letter-spacing: -0.03em;
+							}									
+
+						}
+						.SectionHeader__Description {
+							margin-left: 0px;
+							margin-top: 0px;
+							padding-right: 51px;
+
+							@include for-phone {
+								margin-right: 0px;
+								padding-right: 0px;
+								width: 100%;
+							}								
+							p {
+								@extend %text-16-normal;
+								color: $black-color;
+								max-width: 560px;
+							}
+						}
+					}
+				}
+
+				.Timeline__ImageWrapper {
+
+					height: 560px;
+
+					margin-top: -110px;
+
+					@include for-tablet {
+						width: 100%;
+						margin-top: 56px;
+						height: 488px;
+					}					
+
+					@include for-phone {
+						width: 100%;
+						margin-top: 40px;
+						height: 312px;
+						position: relative;	
+					}					
+
+					.Timeline__Image {
+						transform:none;
+						width: 560px;
+						height: 560px;
+						margin: 0 auto;
+
+						@include for-tablet {
+							float: none;
+							margin: 0 auto;
+							width: 488px;
+							height: 488px;
+						}
+
+						@include for-phone {
+							width: 312px;
+							height: 312px;							
+							float: none;
+							margin: 0 auto;
+						}	
+
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,114 @@
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="cbmd">
+    {%- assign style = section.settings.highlight_style -%}
+
+    {% if style == 'left_image' %}
+    <div class="Highlights_image_container Highlights_image_left">
+      <div class="Highlights_item Highlights_first">
+
+        {%- if section.settings.highlight_image != blank and section.settings.highlight_video == blank-%}
+          <img class="highlight_image"
+               src="{{ section.settings.highlight_image | img_url: 'master' }}"
+               srcset="{{ section.settings.highlight_image | img_url: 'master' }} 1x, {{ section.settings.highlight_image | img_url: 'master', scale: 2 }} 2x"
+               alt="{{ section.settings.highlight_image.alt | default: shop.name | escape }}">
+
+        {%- endif -%}
+
+        {%- if section.settings.highlight_video != blank -%}
+          <video class="highlight_image" frameborder="0" allowfullscreen playsinline autoplay loop muted>
+              <source src="{{section.settings.highlight_video}}">
+          </video>   
+        {%- endif -%}
+
+      </div>
+
+      <div class="Highlights_item Highlights_second">
+        <div class="Highlights_item_content">
+          <p class="Highlights_heading">{{section.settings.highlight_heading}}</p>
+          <p class="Highlights_title">{{section.settings.highlight_title}}</p>
+          <p class="Highlights_description">{{section.settings.highlight_description}}</p>
+
+          {%- assign action_link = section.settings.action_link -%}
+          {%- assign action_text = section.settings.action_text -%}
+          {%- assign action_title = section.settings.action_title -%}
+          {%- assign action_style = section.settings.action_style -%}
+          {%- if action_title != blank -%}
+            <p class="Highlights_action">
+              {%- if action_text -%}
+                {%- if action_style == "button" -%}
+                  <a href="{{action_text}}" class="Button Button--cbd Button--red">{{ section.settings.action_title | escape }}</a>
+                {%- else -%}  
+                  <a href="{{action_text}}" class="Link Link--cbd">{{ section.settings.action_title | escape }}</a>
+                {%- endif -%}              
+
+              {%- else-%}
+                {%- if action_style == "button" -%}
+                  <a href="{{section.settings.action_link}}" class="Button Button--cbd Button--red">{{ section.settings.action_title | escape }}</a>
+                {%- else -%}  
+                  <a href="{{section.settings.action_link}}" class="Link Link--cbd">{{ section.settings.action_title | escape }}</a>
+                {%- endif -%}              
+
+              {%- endif -%}
+            </p>
+          {%- endif -%}      
+
+        </div>
+      </div>
+    </div>
+    {% elsif style == 'right_image' %}
+    <div class="Highlights_image_container Highlights_image_right">
+      <div class="Highlights_item Highlights_second">
+
+        {%- if section.settings.highlight_image != blank -%}
+          <img class="highlight_image"
+               src="{{ section.settings.highlight_image | img_url: 'master' }}"
+               srcset="{{ section.settings.highlight_image | img_url: 'master' }} 1x, {{ section.settings.highlight_image | img_url: 'master', scale: 2 }} 2x"
+               alt="{{ section.settings.highlight_image.alt | default: shop.name | escape }}">
+
+        {%- endif -%}
+      </div>      
+      <div class="Highlights_item Highlights_first">
+        <div class="Highlights_item_content">
+          <p class="Highlights_heading">{{section.settings.highlight_heading}}</p>
+          <p class="Highlights_title">{{section.settings.highlight_title}}</p>
+          <p class="Highlights_description">{{section.settings.highlight_description}}</p>
+
+          {%- assign action_link = section.settings.action_link -%}
+          {%- assign action_title = section.settings.action_title -%}
+          {%- assign action_style = section.settings.action_style -%}
+          {%- assign action_text = section.settings.action_text -%}
+
+          {%- if action_title != blank -%}
+          {%- assign modal = '' -%}
+          {%- if action_title == "Talk with us" or action_title == "Get in touch" -%}
+            {%- assign modal = 'data-action="open-modal" aria-controls="modal-notify-available"' -%}
+          {%- endif -%}
+
+            <p class="Highlights_action">
+              {%- if action_text -%}
+                {%- if action_style == "button" -%}
+                  <a href="{{action_text}}" {{ modal }} class="Button Button--cbd Button--red">{{ section.settings.action_title | escape }}</a>
+                {%- else -%}  
+                  <a href="{{action_text}}" {{ modal }} class="Link Link--cbd">{{ section.settings.action_title | escape }}</a>
+                {%- endif -%}              
+
+              {%- else-%}
+                {%- if action_style == "button" -%}
+                  <a href="{{section.settings.action_link}}" {{ modal }} class="Button Button--cbd Button--red">{{ section.settings.action_title | escape }}</a>
+                {%- else -%}  
+                  <a href="{{section.settings.action_link}}" {{ modal }} class="Link Link--cbd">{{ section.settings.action_title | escape }}</a>
+                {%- endif -%}              
+
+              {%- endif -%}
+            </p>
+          {%- endif -%}               
+        </div>
+      </div>
+    </div>
+    {% endif %}  
+</section>
+
+<style>
+  .Highlights_image_container {
+    background: {{section.settings.background_color}};
+  }
+</style>
