@@ -45,7 +45,7 @@
               </svg-->
             </div>
 
-            <a class="Button Button--cbd Button--red" href="{{section.settings.action_link}}">{{section.settings.action_name}}</a>
+            <a class="Button Button--cbd Button--red"  data-action="open-modal" aria-controls="modal-general-newsletter" href="{{section.settings.action_link}}">{{section.settings.action_name}}</a>
           </div>                    
         {%- endif -%}        
       </div>
@@ -53,13 +53,6 @@
     </div>
   </div>
 </section>
-<script>
-    $(document).ready( function () {
-        $(".video_play_controller_area").click( function () {
-          $("#section-{{ section.id }}").find("video")[0].play();
-        });
-    });
-</script>
 
 {% schema %}
 {

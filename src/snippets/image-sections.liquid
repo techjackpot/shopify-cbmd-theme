@@ -79,8 +79,11 @@
 
           {%- if action_title != blank -%}
           {%- assign modal = '' -%}
-          {%- if action_title == "Talk with us" or action_title == "Get in touch" -%}
-            {%- assign modal = 'data-action="open-modal" aria-controls="modal-notify-available"' -%}
+          {%- if action_title == "Talk with us" -%}
+            {%- assign modal = 'data-action="open-modal" aria-controls="modal-healthcare-providers"' -%}
+          {%- endif -%}
+          {%- if action_title == "Get in touch" -%}
+            {%- assign modal = 'data-action="open-modal" aria-controls="modal-healthcare-providers"' -%}
           {%- endif -%}
 
             <p class="Highlights_action">

@@ -152,7 +152,8 @@
       {% section 'footer' %}
     </div>
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7497651.js"></script>
-    <div id="modal-notify-available" class="Modal Modal--address Modal--small" aria-hidden="true" role="dialog" data-scrollable>
+
+    <div id="modal-notify-available" class="Modal Modal-Popup-Subscription Modal--address Modal--small" aria-hidden="true" role="dialog" data-scrollable>
       <button class="Modal__Close Modal__Close--outside" data-action="close-modal">{%- render 'icon' with 'close' -%}</button>
 
       <header class="Modal__Header">
@@ -163,6 +164,62 @@
       <div class="Modal__Content">
 
         <form id="product-subscription">
+          <div class="Form__Item">
+            <input type="email" class="Form__Input Input--cbd" name="email" value="" placeholder="{{ 'overview.email.placeholder' | t }}">
+          </div>
+
+          <div class="Form__Item">
+            <div class="Form__CheckboxWrapper">
+              <input type="checkbox" class="Form__Checkbox" name="cbmd_news" id="cbmd_news" value="0">
+              {% render 'icon' with 'checkmark_cbmd' %}
+              <label for="cbmd_news">{{ 'overview.news_title' | t }}</label>
+            </div>
+          </div>
+
+          <button type="submit" class="Button Button--cbd Button--red">{{ 'overview.notify_me' | t }}</button>        
+        </form>
+      </div>
+    </div>
+
+    <div id="modal-healthcare-providers" class="Modal Modal-Popup-Subscription Modal--address Modal--small" aria-hidden="true" role="dialog" data-scrollable>
+      <button class="Modal__Close Modal__Close--outside" data-action="close-modal">{%- render 'icon' with 'close' -%}</button>
+
+      <header class="Modal__Header">
+        <h3 class="Modal__Title Heading u-h2">Thank you for your interest.<br/>We welcome the opportunity to work with you.</h3>
+        <p class="Modal__Description">{{ 'overview.email.description' | t }}</p>
+      </header>
+
+      <div class="Modal__Content">
+
+        <form id="healthcare-providers">
+          <div class="Form__Item">
+            <input type="email" class="Form__Input Input--cbd" name="email" value="" placeholder="{{ 'overview.email.placeholder' | t }}">
+          </div>
+
+          <div class="Form__Item">
+            <div class="Form__CheckboxWrapper">
+              <input type="checkbox" class="Form__Checkbox" name="cbmd_news" id="cbmd_news" value="0">
+              {% render 'icon' with 'checkmark_cbmd' %}
+              <label for="cbmd_news">{{ 'overview.news_title' | t }}</label>
+            </div>
+          </div>
+
+          <button type="submit" class="Button Button--cbd Button--red">{{ 'overview.notify_me' | t }}</button>        
+        </form>
+      </div>
+    </div>
+
+    <div id="modal-general-newsletter" class="Modal Modal-Popup-Subscription Modal--address Modal--small" aria-hidden="true" role="dialog" data-scrollable>
+      <button class="Modal__Close Modal__Close--outside" data-action="close-modal">{%- render 'icon' with 'close' -%}</button>
+
+      <header class="Modal__Header">
+        <h3 class="Modal__Title Heading u-h2">Get the latest.<br/>CBMD™ gives you access to all the latest news, research, and information.</h3>
+        <p class="Modal__Description">{{ 'overview.email.description' | t }}</p>
+      </header>
+
+      <div class="Modal__Content">
+
+        <form id="general-newsletter">
           <div class="Form__Item">
             <input type="email" class="Form__Input Input--cbd" name="email" value="" placeholder="{{ 'overview.email.placeholder' | t }}">
           </div>
