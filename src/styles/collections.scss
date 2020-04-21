@@ -58,14 +58,16 @@
 
 
 				@include for-tablet {
-					height: 350px;
+					// height: 350px;
+					height: 440px;
 					background: linear-gradient(90deg, #ccc 0%, #ddd 100%);
 					padding-left: 36px;
 					position: relative;
 				}  
 
 				@include for-phone {    
-					height: 300px;
+					// height: 300px;
+					height: 340px;
 					padding-left: 24px;
 					background: linear-gradient(90deg, #ccc 0%, #ddd 100%);
 					position: relative;

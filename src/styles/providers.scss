@@ -20,12 +20,12 @@
 			color: $red-color;	
 
 			@include for-tablet {    
-				margin-bottom: 36px;
+				// margin-bottom: 36px;
 				padding-left: 36px;
 			}
 
 			@include for-phone {    
-				margin-bottom: 36px;
+				// margin-bottom: 36px;
 				padding-left: 24px;
 			}
 
@@ -68,22 +68,23 @@
 				}  				
 				.Highlights_providers_description {
 					@extend %text-44-300;
-				    position: absolute;
-				    -webkit-transition: all 0.5s ease;
-				    -moz-transition: all 0.5s ease;
-				    transition: all 0.5s ease;
-				    -webkit-backface-visibility: hidden;
-				    -moz-backface-visibility: hidden;    
-				    backface-visibility: hidden;   		
+					line-height: 52px;
+			    position: absolute;
+			    -webkit-transition: all 0.5s ease;
+			    -moz-transition: all 0.5s ease;
+			    transition: all 0.5s ease;
+			    -webkit-backface-visibility: hidden;
+			    -moz-backface-visibility: hidden;
+			    backface-visibility: hidden;
 					top: 50%;
-					transform: translate(0,-50%);				    			
-				    margin-bottom: 0px;
-					@include for-tablet {    
+					transform: translate(0,-50%);
+				  margin-bottom: 0px;
+					@include for-tablet {
 						font-size: 38px;
 						line-height: 44px;
 						max-width: 100%;
 						padding-left: 36px;
-					} 
+					}
 
 					@include for-phone {    
 						font-size: 24pt;
@@ -183,7 +184,7 @@
 							margin-bottom: 0px;
 
 							@include for-phone {   
-								font-size: 16pt;
+								// font-size: 16pt;
 							}							
 						}
 
@@ -195,8 +196,8 @@
 							p {
 								margin-bottom: 0px;
 								@include for-phone {   
-									font-size: 12pt;
-									line-height: 14pt; 
+									// font-size: 12pt;
+									// line-height: 14pt;
 									br {
 										display: none;
 									}
