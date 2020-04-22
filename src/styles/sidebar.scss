@@ -38,6 +38,12 @@
   }
 
   .SidebarMenu__Nav {
+    > .Collapsible:first-child {
+      @include for-phone {
+        display: none;
+      }
+    }
+
     .Collapsible__Plus {
       display: none;
     }

@@ -675,7 +675,7 @@
         "settings": {
           "background_color": "#ffffff",
           "section_heading": "Our process",
-          "section_title": "A higher degree<br>\n of care."
+          "section_title": "A higher degree <br> of care."
         }
       },
       "1586352869270": {
@@ -801,7 +801,7 @@
         "settings": {
           "background_color": "#ffffff",
           "highlight_heading": "Education",
-          "highlight_title": "Informed decisions.  <br>Safer choices.",
+          "highlight_title": "Informed decisions. <br>Safer choices.",
           "highlight_description": "Understanding CBD is key to knowing what it can do. CBMD™ gathers resources and research to help physicians and consumers understand what’s in the products they use.",
           "action_style": "link",
           "action_title": "",
@@ -907,7 +907,7 @@
             "settings": {
               "item_name": "FDA recommends science-based approach",
               "item_description": "With so many questions around the safety and quality of CBD products, the FDA looks at policy to ensure safe standards are maintained for the production of CBD.",
-              "picture": "shopify:\/\/shop_images\/cbmd-additional-FDA-1.jpg",
+              "picture": "shopify:\/\/shop_images\/cbmd-additional-resources-FDA-1_2x_8e952825-2f65-4ed4-baaf-d4e5378b8a02.jpg",
               "link": "https:\/\/www.fda.gov\/consumers\/consumer-updates\/what-you-need-know-and-what-were-working-find-out-about-products-containing-cannabis-or-cannabis"
             }
           },
@@ -916,7 +916,7 @@
             "settings": {
               "item_name": "Clinicians guide to CBD and hemp oil",
               "item_description": "With the explosion in CBD’s popularity comes the need for physicians to understand the importance of product selection to ensure safety.",
-              "picture": "shopify:\/\/shop_images\/cbmd-additional-resources-clinicians-2_2x_3ab4726c-b4aa-4908-8dd2-440199f31e38.jpg",
+              "picture": "shopify:\/\/shop_images\/cbmd-additional-resources-clinicians-2_2x_2fe73169-5c7a-4c06-b070-1afe9a398a91.jpg",
               "link": "https:\/\/www.mayoclinicproceedings.org\/article\/S0025-6196(19)30007-2\/fulltext"
             }
           },
@@ -925,7 +925,7 @@
             "settings": {
               "item_name": "Johns Hopkins professor looks to physicians",
               "item_description": "Associate Professor of Psychiatry and Behavioral Sciences Ryan Vandrey, PhD says patients should speak to their doctors before trying CBD.",
-              "picture": "shopify:\/\/shop_images\/cbmd-additional-resources-3_2x_2d506e09-c4da-420b-9e78-d01d8716d453.jpg",
+              "picture": "shopify:\/\/shop_images\/cbmd-additional-resources-3_2x_db217314-0152-4ec9-9055-4226b6ebfca0.jpg",
               "link": "https:\/\/hub.jhu.edu\/2020\/01\/03\/what-is-cbd-2499-em1-art1-qa-health\/"
             }
           }
@@ -1213,8 +1213,8 @@
             "settings": {
               "heading": "General inquiries",
               "description": "<p>For all general inquiries and questions: <br>\n<a class=\"hyper_link\" href=\"mailto:info@cbmd.com\">info@cbmd.com<\/a><\/p>\n<p>For press or other media inquiries:<br>\n<a class=\"hyper_link\" href=\"mailto:press@cbmd.com\">press@cbmd.com<\/a><\/p>",
-              "button_name": "",
-              "button_link": ""
+              "button_name": "Get in touch",
+              "button_link": "#"
             }
           }
         },
@@ -1261,7 +1261,7 @@
           "1586882381612": {
             "type": "item",
             "settings": {
-              "link_image": "shopify:\/\/shop_images\/cbmd-social-6_2x_d69d75ef-99c5-402b-8a46-d750cfa5df15.jpg"
+              "link_image": "shopify:\/\/shop_images\/contact-cbmd-social.png"
             }
           }
         },

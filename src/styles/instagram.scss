@@ -62,6 +62,9 @@
 				height: auto;
 			}
 
+			@include for-desktop {
+				flex: 1;
+			}
 
 			@include for-tablet {    
 				width: 232px;

@@ -17,15 +17,12 @@
       </span>
     </p>
     <div class="items">
-
-    {%- for block in section.blocks -%}
-      {%- assign img = block.settings.link_image -%}
-        
-          <div class="item">
-              <img class="instagram_img" src="{{ img | img_url: 'master' }}" >
-          </div>
-        
-    {%- endfor -%}    
+      {%- for block in section.blocks -%}
+        {%- assign img = block.settings.link_image -%}
+        <div class="item">
+          <img class="instagram_img" src="{{ img | img_url: 'master' }}" >
+        </div>
+      {%- endfor -%}
     </div>
   </div>
 
@@ -39,7 +36,7 @@
     
     function initInstagramSlider() {
       var breakpoint = 1280;
-      if (window.innerWidth > breakpoint) {
+      if (window.innerWidth >= breakpoint) {
         if ($("#section-{{ section.id }}").find(".slick-initialized").length > 0) 
           $('#section-{{ section.id }}').find(".items").slick('unslick');
       }

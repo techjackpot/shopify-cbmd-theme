@@ -9,25 +9,19 @@
           <a href="{{- block.settings.button_link -}}">
             <div class="Highlights_multilnk_item_content" style="background-image: url({{ link_image | img_url: 'master' }});">
               <h3>{{- block.settings.link_title -}}</h3>
-              <!--img class="highlight_image"
-                   src="{{ link_image | img_url: 'master' }}"
-                   srcset="{{ link_image | img_url: 'master' }} 1x, {{ link_image | img_url: 'master', scale: 2 }} 2x"
-                   alt="{{ link_title | default: shop.name | escape }}"-->
               <div class="Highlights_multilnk_item_body">
-                
-                  <p>{{- block.settings.link_sub_title -}}</p>
-                  <img class="highlight_image"
-                     src="{{- 'arrow-right.png' | asset_img_url: 'master' -}}"
-                     alt="{{ link_title | default: shop.name | escape }}">                
-                
+                <p>{{- block.settings.link_sub_title -}}</p>
+                <img
+                  class="highlight_image"
+                  src="{{- 'arrow-right.svg' | asset_url -}}"
+                  alt="{{ link_title | default: shop.name | escape }}"
+                >
               </div>
-
             </div>
           </a>
         </div>
-
       {%- endif -%}
-    {%- endfor -%}    
+    {%- endfor -%}
   </div>
 </section>
 
