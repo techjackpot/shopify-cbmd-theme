@@ -281,7 +281,7 @@
           "foreground_style": "side_image",
           "foreground_position": "right",
           "sidebar_background": "#eb161e",
-          "banner_title": "Formulated by physicians, made for you.™",
+          "banner_title": "Formulated by physicians, made for you.<span>™<\/span>",
           "banner_text": "Be assured. We bring science to CBD. The same integrity we apply every day in our medical practice is here in our products.",
           "button_link": "shopify:\/\/pages\/overview",
           "button_text": "See our CBD",
@@ -381,7 +381,7 @@
           "action_style": "link",
           "action_title": "See the science",
           "action_link": "shopify:\/\/pages\/our-science",
-          "action_text": ""
+          "action_text": "\/pages\/our-science"
         }
       },
       "1586335866753": {
@@ -675,7 +675,7 @@
         "settings": {
           "background_color": "#ffffff",
           "section_heading": "Our process",
-          "section_title": "A higher degree <br> of care."
+          "section_title": "A higher degree<br>\n of care."
         }
       },
       "1586352869270": {
@@ -1057,7 +1057,7 @@
           "foreground_position": "right",
           "sidebar_background": "#eb161e",
           "banner_title": "Designed with you in mind.",
-          "banner_text": "Our full line of physician-formulated CBD products. Our medical-grade products are all developed to offer a more responsible and reliable CBD option",
+          "banner_text": "Our full line of physician-formulated CBD products. Our medical-grade products are all developed to offer a more responsible and reliable CBD option.",
           "button_link": "",
           "button_text": "See our CBD"
         }

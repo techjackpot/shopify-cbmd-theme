@@ -1,265 +1,258 @@
-#section-footer 
-{
-	.Container {
-		padding: 64px;
+#section-footer {
 
-		@include for-large-desktop {    
-			max-width: $large-desktopview;
-			margin: 0 auto;
-		}
+  .Container {
+    padding: 64px;
 
+    @include for-large-desktop {
+      max-width: $large-desktopview;
+      margin: 0 auto;
+    }
 
-		@include for-tablet {    
-			padding: 60px 36px 20px;
-		}
+    @include for-tablet {
+      padding: 60px 36px 20px;
+    }
 
-		@include for-phone {    
-			padding: 44px 24px 20px;
-		}
+    @include for-phone {
+      padding: 44px 24px 20px;
+    }
 
-		.Footer_header {
-			margin-bottom: 56px;
-			svg {
-				width: 100px;
-				height: 40px;
-			}
-			.footer_cbmd_logo {
-				width: 100px;
-				height: 40px;
-			}
+    .Footer_header {
+      margin-bottom: 56px;
+      svg {
+        width: 100px;
+        height: 40px;
+      }
+      .footer_cbmd_logo {
+        width: 100px;
+        height: 40px;
+      }
 
-			@include for-phone {    
-				margin-bottom: 35px;
-			}	
-		}		
+      @include for-phone {
+        margin-bottom: 35px;
+      } 
+    }   
 
-		.Footer__Inner_row {
-			display: flex;
+    .Footer__Inner_row {
+      display: flex;
 
-			@include for-tablet {    
-				display: block;
-			}
+      @include for-tablet {
+        display: block;
+      }
 
-			@include for-phone {
-				display: block;
-			}
+      @include for-phone {
+        display: block;
+      }
 
-			.Footer__Inner_first {
-				width: 50%;
+      .Footer__Inner_first {
+        width: 50%;
 
-				@include for-tablet {    
-					width: 100%;
-					margin-bottom: 56px;
-				}	
+        @include for-tablet {
+          width: 100%;
+          margin-bottom: 56px;
+        } 
 
-				@include for-phone {    
-					width: 100%;
-					margin-bottom: 0px;
-				}	
+        @include for-phone {
+          width: 100%;
+          margin-bottom: 0px;
+        } 
 
-				.Footer__Title {
-					margin-bottom: 8px;
-					@extend %text-14-500;
+        .Footer__Title {
+          margin-bottom: 8px;
+          @extend %text-14-500;
 
-					@include for-phone {    
-						font-size: 14px;
-						font-weight: 500;
-					}	
-				}
-				.Footer__Content {
-					p {
-						margin-bottom: 0px;
-						@extend %text-12-normal;					
-						margin-top: 12px;
-						color: $black-color;
+          @include for-phone {
+            font-size: 14px;
+            font-weight: 500;
+          } 
+        }
+        .Footer__Content {
+          p {
+            margin-bottom: 0px;
+            @extend %text-12-normal;
+            margin-top: 12px;
+            color: $black-color;
+          }
+        }
+      }
 
-					}
-				}
-			}
+      .Footer__Inner {
 
-			.Footer__Inner {
+        display: flex;
+        flex: 1;
+        justify-content: flex-start;
 
-				display: flex;
-				flex: 1;
-				justify-content: flex-start;
+        margin-right: 0px;
+        margin-left: 0px;
 
-				margin-right: 0px;
-				margin-left: 0px;
+        @include for-phone {
+          flex-wrap: wrap;
+        }
 
-				@include for-phone {    
-					flex-wrap: wrap;
-				}
+        .Heading {
+          margin-bottom: 10px;
 
-				.Heading {
-					margin-bottom: 10px;
+          @include for-phone {
+            margin-bottom: 8px;
+          }
 
-					@include for-phone {    
-						margin-bottom: 8px;
-					}
+        }
 
-				}
+        .Footer__Block {
 
-				.Footer__Block {
+          width: 40%;
 
-					width: 40%;
+          @include for-tablet {
+            width: 45%;
+            padding-right: 0px;
+            padding-left: 0px;
+          }
 
-					@include for-tablet {    
-						width: 45%;
-						padding-right: 0px;
-						padding-left: 0px;
-					}
+          @include for-phone {
+            width: 50%;
+            margin-top: 40px;
+            padding-left: 0px;
+          }
 
-					@include for-phone {    
-						width: 50%;
-						margin-top: 40px;
-						padding-left: 0px;
-					}
+          .Footer__Social {
+            margin-top: 0px;
+            li {
+              margin-top: 0px;
+              margin-bottom: 20px;
+              max-width: 24px;
+              max-height: 24px;
 
-					.Footer__Social {
-						margin-top: 0px;
-						li {
-							margin-top: 0px;
-							margin-bottom: 20px;
-							max-width: 24px;
-							max-height: 24px;
+              @include for-tablet {
+                margin-bottom: 20px;
+              }             
 
-							@include for-tablet {    
-								margin-bottom: 20px;
-							}							
+              @include for-phone {
+                margin-bottom: 0px;
+                margin-right: 0px;
+              }             
+            }
+          }
+          .Linklist {
+            height: 117px;
+            // display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            .Linklist__Item {
+              margin-bottom: 8px;
+            }   
 
-							@include for-phone {    
-								margin-bottom: 0px;
-								margin-right: 0px;
-							}							
-						}
-					}
-					.Linklist {
-						height: 117px;
-						// display: flex;
-						flex-wrap: wrap;
-						align-items: flex-end;
-						.Linklist__Item {
-							margin-bottom: 8px;
-						}		
+            @include for-phone {
+              height: auto;
+            }       
+          }
+          .Link--primary {
+            @extend %text-16-normal;
+            color: $black-color;
+          }
+          .is-active {
+            @extend %text-16-600;
+            color: $black-color;
+          }
 
-						@include for-phone {    
-							height: auto;
-						}				
-					}
-					.Link--primary {
-						@extend %text-16-normal;
-						color: $black-color;
-					}
-					.is-active {
-						@extend %text-16-600;
-						color: $black-color;
-					}
+          &:nth-child(2) {
+            .Linklist {
+              .Linklist__Item {
+                @include for-phone {
+                  // margin-bottom: 16px;
+                }                 
+                
+              }         
+            }           
+          }         
+        }
+        .Footer__Block--text {
+          flex-basis: 0px;
+          padding-right: 0px;
 
-					&:nth-child(2) {
-						.Linklist {
-							.Linklist__Item {
-								@include for-phone {    
-									margin-bottom: 16px;
-								}									
-								
-							}					
-						}						
-					}					
-				}
-				.Footer__Block--text {
-					flex-basis: 0px;
-					padding-right: 0px;
+          @include for-phone {
+            flex-basis: 400px;
+          }     
+        }     
+      }     
+    }
 
-					@include for-phone {    
-						flex-basis: 400px;
-					}			
-				}			
-			}			
-		}
+    .Footer__Bottom {
 
-		.Footer__Bottom {
+      @include for-tablet {
+        margin-top: 56px;
+      }     
 
-			@include for-tablet {    
-				margin-top: 56px;
-			}			
+      @include for-phone {
+        margin-top: 56px;
+      }     
 
-			@include for-phone {    
-				margin-top: 56px;
-			}			
+      .Footer__Proud {
+        
+        .Footer__ThemeAuthor {
+          @extend %text-10-normal;
+        }
+        .footer_cbmd_logo {
+          width: 180px;
+          height: 24px;
+        }
+        p {
+          margin-bottom: 12px;
+          @extend %text-10-500;
+          color: $black-color;
+        }
+      } 
 
-			.Footer__Proud {
-				
-				.Footer__ThemeAuthor {
-					@extend %text-10-normal;
-				}
-				.footer_cbmd_logo {
-					width: 180px;
-					height: 24px;
-				}
-				p {
-					margin-bottom: 12px;
-					@extend %text-10-500;
-					color: $black-color;
-				}
-			}	
+      .Footer__Copyright {
+        margin-top: 67px;
 
-			.Footer__Copyright {
-				margin-top: 67px;
+        @include for-phone {    
+          margin-top: 40px;
+        }     
 
-				@include for-phone {    
-					margin-top: 40px;
-				}			
+        .Footer__Content {
+          @extend %text-10-normal;
+          color: $black-color;
+          letter-spacing: 0;
 
-				.Footer__Content {
-					@extend %text-10-normal;
-					color: $black-color;
-					letter-spacing: 0;		
+          br {
+            @include for-tablet {
+              display: block;
+            }     
 
-					br {
-						@include for-tablet {    
-							display: block;
-						}			
+            @include for-phone {
+              display: none;
+            }
+          }
 
-						@include for-phone {    
-							display: none;
-						}
-					}			
+          p {
+            
+            margin: 16px 0px;
+            @extend %text-10-normal;
+            color: $black-color;
+            letter-spacing: 0;
 
-					p{
-						
-						margin: 16px 0px;
-						@extend %text-10-normal;
-						color: $black-color;
-						letter-spacing: 0;
+            @include for-tablet {
+              margin: 36px 0px 0px 0px;
+              max-width: 50%;
+            }     
 
-						@include for-tablet {    
-							margin: 36px 0px 0px 0px;
-							max-width: 50%;
-						}			
+            @include for-phone {
+              margin: 24px 0px 0px 0px; 
+              max-width: 100%;
+            }     
 
-						@include for-phone {   
-							margin: 24px 0px 0px 0px; 
-							max-width: 100%;
-						}			
-
-						&:not(:first-child) {
-							@include for-tablet {    
-								margin-top: 20px;
-							}			
-						}
-						a {
-							@extend %text-10-normal;
-							color: $black-color;
-							text-decoration: none;
-						}
-
-
-					}					
-				}
-
-
-			}
-		}
-
-	}
+            &:not(:first-child) {
+              @include for-tablet {
+                margin-top: 20px;
+              }     
+            }
+            a {
+              @extend %text-10-normal;
+              color: $black-color;
+              text-decoration: none;
+            }
+          }         
+        }
+      }
+    }
+  }
 }

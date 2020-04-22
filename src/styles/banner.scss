@@ -1,464 +1,472 @@
 .shopify-section--banner {
 
-	/* background: $white-color; */
-	
+  /* background: $white-color; */
+  
   margin-top: calc(-1 * var(--header-height));
    
   max-height: calc(100vh);
-	@include for-desktop {
-	  height: calc(100vh);
-	}
-	@include for-tablet {
-		margin-top: 0;
-		max-height: calc(100vh - 80px);
-	}
-	@include for-phone {
-		margin-top: 0;
-		max-height: unset;
-	}
+  @include for-desktop {
+    height: calc(100vh);
+  }
+  @include for-tablet {
+    margin-top: 0;
+    max-height: calc(100vh - 80px);
+  }
+  @include for-phone {
+    margin-top: 0;
+    max-height: unset;
+  }
 
-	@include for-tablet {
-		@supports (--css: variables) {
-			height: calc(var(--screen-size) / 1.14 + 0px);
-		}
-	}
+  @include for-tablet {
+    @supports (--css: variables) {
+      height: calc(var(--screen-size) / 1.14 + 0px);
+    }
+  }
 
-	@include for-phone {
-		@supports (--css: variables) {
-			height: auto;
+  @include for-phone {
+    @supports (--css: variables) {
+      height: auto;
 
-			.banner_backgroundImageWrapper {
-				height: calc(var(--screen-size) / 1.5 + 0px) !important;
-			}
-		}
+      .banner_backgroundImageWrapper {
+        height: calc(var(--screen-size) / 1.5 + 0px) !important;
+      }
+    }
 
-		@supports (--css: variables) {
-			// margin-bottom: calc(var(--banner-content-height) + 40px);
-		}
+    @supports (--css: variables) {
+      // margin-bottom: calc(var(--banner-content-height) + 40px);
+    }
 
-	}
-	section {
-		background: linear-gradient(90deg, #eee 0%, #dbdbdb 100%);
-		display: flex;
-		margin: 0px;
-		height: 100%;
+  }
+  section {
+    background: linear-gradient(90deg, #eee 0%, #dbdbdb 100%);
+    display: flex;
+    margin: 0px;
+    height: 100%;
 
-		@include for-tablet {    
-		  flex-wrap: wrap;
-		}    
+    @include for-tablet {    
+      flex-wrap: wrap;
+    }    
 
-		.banner_sidebar {
-			z-index: 1;
-			@include for-tablet {    
-				width: 0px;
-			}		  
-			@include for-phone {    
-				width: 0px;
-			}
-		}
+    .banner_sidebar {
+      z-index: 1;
+      @include for-tablet {    
+        width: 0px;
+      }     
+      @include for-phone {    
+        width: 0px;
+      }
+    }
 
-		.banner_background {
-	    flex: 1;
-	    display: flex;
-	    position: relative;
-			/* background: rgb(238,238,238); */
-			/* background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(219,219,219,1) 100%); */
-
-
-			@include for-phone {    
-				flex-wrap: wrap;
-			}
-
-			.banner_backgroundImageWrapper {
-				display: flex;
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				padding: 0 64px;
-		    align-items: center;
-		    justify-content: flex-end;
-				@include for-tablet {
-					padding: 0 36px;
-				}
-				@include for-phone {
-					padding: 0;
-			    position: relative;
-			    align-items: flex-start;
-    			overflow: hidden;
-				}
-
-				.banner_backgroundImage {
-			    height: 100%;
-			    display: block;
-			    width: auto;
-			    object-fit: cover;
-			    object-position: right;
-
-					@include for-tablet {
-					}									
-
-					@include for-phone {
-						width: 50%;
-						height: auto;
-				    margin-right: -5%;
-				    margin-top: -5%;
-					}
-				}
-
-			}
-
-		.banner_contentWrapper {
-			display: flex;
-			width: 50%;
-			height: 100%;
-			padding: 0 0 0 64px;
-			position: relative;
-			align-items: center;
-			@include for-tablet {
-				padding: 0 0 0 36px;
-			}
-			@include for-phone {
-		    width: 100%;
-		    background: #ffffff;
-		    height: auto;
-		    padding: 24px;
-			}
-		}
-
-			.banner_content {
-
-				@include for-tablet { 
-				}			
-
-				@include for-phone {
-				}			
+    .banner_background {
+      flex: 1;
+      display: flex;
+      position: relative;
+      /* background: rgb(238,238,238); */
+      /* background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(219,219,219,1) 100%); */
 
 
-				.banner_content_title {
-					@extend %display-desktop-text;
-					margin-bottom: 16px;
+      @include for-phone {    
+        flex-wrap: wrap;
+      }
 
-					@include for-large-desktop {    
-						max-width: 720px;
-					}
+      .banner_backgroundImageWrapper {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 64px;
+        align-items: center;
+        justify-content: flex-end;
+        @include for-tablet {
+          padding: 0 36px;
+        }
+        @include for-phone {
+          padding: 0;
+          position: relative;
+          align-items: flex-start;
+          overflow: hidden;
+        }
 
-					@include for-tablet {    
-						font-size: 48px;
-						line-height: 48px;
-					}
+        .banner_backgroundImage {
+          height: 100%;
+          display: block;
+          width: auto;
+          object-fit: cover;
+          object-position: right;
 
-					@include for-phone {    
-						font-size: 40px;
-						line-height: 40px;
-						max-width: 300px;
-					}
-				}    
-				.banner_content_text {
-					@extend %text-16-normal;
-					margin: 0px;
-					@include for-large-desktop {    
-						max-width: 600px;
-					}
+          @include for-tablet {
+          }                 
 
-					@include for-tablet {
-						br {
-							display: none;
-						}
-					}			
-					@include for-phone {
-						br {
-							display: none;
-						}
-					}			
+          @include for-phone {
+            width: 50%;
+            height: auto;
+            margin-right: -5%;
+            margin-top: -5%;
+          }
+        }
 
+      }
 
-				}	
-				.SectionButton {
-					margin-top: 20px;
-				}
-				.banner_content_first {
+      .banner_contentWrapper {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        padding: 0 0 0 64px;
+        position: relative;
+        align-items: center;
+        @include for-tablet {
+          padding: 0 0 0 36px;
+        }
+        @include for-phone {
+          width: 100%;
+          background: #ffffff;
+          height: auto;
+          padding: 24px;
+        }
+      }
 
-					@include for-tablet {
-					}			
+      .banner_content {
 
-					@include for-phone {    
-						max-width: 100%;
-					}			
+        @include for-tablet { 
+        }     
 
-					.Timeline {
-						box-shadow:none;
-						.Timeline__Nav {
-							margin-left: -20px;
-							@include for-tablet {    
-								margin-top : 0px;
-							}
-							@include for-phone {    
-								margin-top : 0px;
-								background:none;
-								margin-left: -10px;
-							}
-
-							.Timeline__NavWrapper {
-								overflow: hidden;
-								text-align: left;
-								.Timeline__NavItem {
-									&::after {
-										background: $red-color;
-									}
-
-									@include for-phone {    
-										padding: 10px;
-									}
-
-									.Timeline__NavLabel {
-										@extend %text-16-500;
-										margin: 0px;
-
-									}							
-								}
-							}					
-						}							
-					}	
-				}
-				.banner_content_second {
-					@include for-tablet {    
-						width: 100%;
-						margin-top: 40px;
-					}
-					@include for-phone {    
-						width: 100%;
-						margin-top: 40px;
-					}									
-					.Timeline {
-						box-shadow: none;
-						.Timeline__ListItem {
-							width: 100%;
-							.Timeline__Item {
-								align-items:flex-start;
-								background: none;
-								.Timeline__Inner {
-									padding-top: 0px;
-									width: 100%;
-
-									@include for-tablet {    
-										padding: 0px;
-									}
-
-									@include for-phone {    
-										padding: 0px;
-									}
-
-									.SectionHeader__Heading {
-										margin: 0px;
-										@extend %text-16-500;
-										color: $red-color;
-
-										@include for-phone {    
-											text-align: left;
-										}
-
-									}
-									.SectionHeader__Description {
-										margin-left: 0px;
-
-										@include for-tablet {    
-											margin-top: 10px;
-											max-width: 100%;
-											margin-left: 0px;											
-										}
-										@include for-phone {    
-											margin-top: 10px;
-											max-width: 100%;
-											margin-left: 0px;											
-										}
-
-										p {
-											@extend %weak-desktop-text;
-
-											@include for-tablet{    
-												font-size: 64px;
-											}
-
-											@include for-phone{    
-												text-align: left;
-												font-size: 36px;
-												line-height: 40px;
-											}
+        @include for-phone {
+        }     
 
 
-										}
-									}
+        .banner_content_title {
+          @extend %display-desktop-text;
+          margin-bottom: 16px;
 
-								}
-							}
-						}
-					}
-				}
-			}				
-		}
-		.full_foreground {
-			max-width: 100%;
-			.banner_backgroundImageWrapper{
-				.banner_backgroundImage{
-					width: 100% !important;
-					@include for-phone{
-						height: 100%;
-						margin: 0px;
-					}
+          span {
+            font-size: 75%;
+            font-weight: 500;
+          }
 
-				}
-			}
-			.banner_contentWrapper {
-				@include for-desktop{    
-/*					padding-left: 254px; */
-				}
-			}
-		}
-	}		
+          @include for-large-desktop {    
+            max-width: 720px;
+          }
+
+          @include for-tablet {    
+            font-size: 48px;
+            line-height: 48px;
+          }
+
+          @include for-phone {    
+            font-size: 40px;
+            line-height: 40px;
+            max-width: 300px;
+          }
+        }    
+        .banner_content_text {
+          @extend %text-16-normal;
+          margin: 0px;
+          @include for-large-desktop {    
+            max-width: 600px;
+          }
+
+          @include for-tablet {
+            br {
+              display: none;
+            }
+          }     
+          @include for-phone {
+            br {
+              display: none;
+            }
+          }     
+
+
+        } 
+        .SectionButton {
+          margin-top: 20px;
+        }
+        .banner_content_first {
+
+          @include for-tablet {
+          }     
+
+          @include for-phone {    
+            max-width: 100%;
+          }     
+
+          .Timeline {
+            box-shadow:none;
+            .Timeline__Nav {
+              margin-left: -20px;
+              @include for-tablet {    
+                margin-top : 0px;
+              }
+              @include for-phone {    
+                margin-top : 0px;
+                background:none;
+                margin-left: -10px;
+              }
+
+              .Timeline__NavWrapper {
+                overflow: hidden;
+                text-align: left;
+                .Timeline__NavItem {
+                  &::after {
+                    background: $red-color;
+                  }
+
+                  @include for-phone {    
+                    padding: 10px;
+                  }
+
+                  .Timeline__NavLabel {
+                    @extend %text-16-500;
+                    margin: 0px;
+
+                  }             
+                }
+              }         
+            }             
+          } 
+        }
+        .banner_content_second {
+          @include for-tablet {    
+            width: 100%;
+            margin-top: 40px;
+          }
+          @include for-phone {    
+            width: 100%;
+            margin-top: 40px;
+          }                 
+          .Timeline {
+            box-shadow: none;
+            .Timeline__ListItem {
+              width: 100%;
+              .Timeline__Item {
+                align-items:flex-start;
+                background: none;
+                .Timeline__Inner {
+                  padding-top: 0px;
+                  width: 100%;
+
+                  @include for-tablet {    
+                    padding: 0px;
+                  }
+
+                  @include for-phone {    
+                    padding: 0px;
+                  }
+
+                  .SectionHeader__Heading {
+                    margin: 0px;
+                    @extend %text-16-500;
+                    color: $red-color;
+
+                    @include for-phone {    
+                      text-align: left;
+                    }
+
+                  }
+                  .SectionHeader__Description {
+                    margin-left: 0px;
+
+                    @include for-tablet {    
+                      margin-top: 10px;
+                      max-width: 100%;
+                      margin-left: 0px;                     
+                    }
+                    @include for-phone {    
+                      margin-top: 10px;
+                      max-width: 100%;
+                      margin-left: 0px;                     
+                    }
+
+                    p {
+                      @extend %weak-desktop-text;
+
+                      @include for-tablet{    
+                        font-size: 64px;
+                      }
+
+                      @include for-phone{    
+                        text-align: left;
+                        font-size: 36px;
+                        line-height: 40px;
+                      }
+
+
+                    }
+                  }
+
+                }
+              }
+            }
+          }
+        }
+      }       
+    }
+    .full_foreground {
+      max-width: 100%;
+      .banner_backgroundImageWrapper{
+        .banner_backgroundImage{
+          width: 100% !important;
+          @include for-phone {
+            height: 100%;
+            margin: 0px;
+          }
+
+        }
+      }
+      .banner_contentWrapper {
+        @include for-desktop {
+          // padding-left: 254px;
+        }
+      }
+    }
+  }   
 }
 
 .banner_no_background {
-	h1 {
-		@extend %text-56-600;
-		color: $black-color;
-	}
-	p {
-		@extend %text-16-normal;	
-		color: $black-color;
-	}
+  h1 {
+    @extend %text-56-600;
+    color: $black-color;
+  }
+  p {
+    @extend %text-16-normal;  
+    color: $black-color;
+  }
 }
 
 .page-overview {
-	.Header {
-		background: $red-color;
-	}
+  .Header {
+    background: $red-color;
+  }
 
-	#shopify-section-banner-overview {
-		margin-top: 0px;
-		height: auto;
-		#section-banner-overview {
-			background: $white-color;
-			.banner_background {
-				@include for-large-desktop {    
-					max-width: $large-desktopview;
-					margin: 0 auto;
-				}			
-				.banner_contentWrapper {
-					display: block;
-					padding-top: 64px;
-					padding-bottom: 40px;
-					.banner_content {
-						position: relative;
-						padding: 0px;
-						top: 0px;
-						max-width: 420px;
-					}
-				}
-			}		
-		}
+  #shopify-section-banner-overview {
+    margin-top: 0px;
+    height: auto;
+    #section-banner-overview {
+      background: $white-color;
+      .banner_background {
+        @include for-large-desktop {    
+          max-width: $large-desktopview;
+          margin: 0 auto;
+        }     
+        .banner_contentWrapper {
+          display: block;
+          padding-top: 64px;
+          padding-bottom: 40px;
+          .banner_content {
+            position: relative;
+            padding: 0px;
+            top: 0px;
+            max-width: 420px;
+          }
+          @include for-phone {
+            padding-bottom: 0px;
+          }
+        }
+      }   
+    }
 
-	}
+  }
 }
 
 .page-contact {
-	.Header {
-		background: $red-color;
-	}
+  .Header {
+    background: $red-color;
+  }
 
-	#shopify-section-banner-contact {
-		margin-top: 0px;
-		height: auto;
-		#section-banner-contact {
-			background: $white-color;
-			.banner_background {
-					@include for-large-desktop {    
-						max-width: $large-desktopview;
-						margin: 0 auto;
-					}
+  #shopify-section-banner-contact {
+    margin-top: 0px;
+    height: auto;
+    #section-banner-contact {
+      background: $white-color;
+      .banner_background {
+          @include for-large-desktop {    
+            max-width: $large-desktopview;
+            margin: 0 auto;
+          }
 
-					.banner_backgroundImageWrapper {
-						hegiht: 80px !important;
-						.banner_backgroundImage {
-							margin-top: 0px;
-						}
-					}
+          .banner_backgroundImageWrapper {
+            height: 80px !important;
+            .banner_backgroundImage {
+              margin-top: 0px;
+            }
+          }
 
-			}			
-		}		
-	}	
+      }     
+    }   
+  } 
 }
 
 .page-our-mission {
-	.shopify-section--banner {
-		section {
-			.banner_background {
-				.banner_content {
-					.banner_content_title {
-						max-width: 550px;
-					}
-				}	
-			}	
-		}
-	}   
+  .shopify-section--banner {
+    section {
+      .banner_background {
+        .banner_content {
+          .banner_content_title {
+            max-width: 550px;
+          }
+        } 
+      } 
+    }
+  }   
 }
 
 .page-our-science {
-	.shopify-section--banner {
-		section {
-			.banner_background {
-				.banner_content {
-					.banner_content_title {
-						max-width: 650px;
-						@include for-phone {    
-							width: 100%;
-						}						
-					}
-				}	
-			}	
-		}
-	}   	
+  .shopify-section--banner {
+    section {
+      .banner_background {
+        .banner_content {
+          .banner_content_title {
+            max-width: 650px;
+            @include for-phone {    
+              width: 100%;
+            }           
+          }
+        } 
+      } 
+    }
+  }     
 }
 
 .shopify-section--banner {
-	section {
-		.half_foreground {
-			background: $white-color;
-			display: block;
-			.banner_contentWrapper {
-				height: auto;
-				padding: 64px 0px 64px 64px;
-				max-width: 605px;
-				width: 100%;
-				@include for-tablet {
-					padding: 56px 0px 56px 36px;
-				}				
-				@include for-phone {
-					padding: 40px 24px 40px 24px;
-				}								
-			}
-			.banner_backgroundImageWrapper {
-				position: initial;
-				display: block;
-				height: auto;
-				width: 100%;
-				@include for-phone {
-					height: auto !important;
-					padding: 0px 24px;
-				}								
+  section {
+    .half_foreground {
+      background: $white-color;
+      display: block;
+      .banner_contentWrapper {
+        height: auto;
+        padding: 64px 0px 64px 64px;
+        max-width: 605px;
+        width: 100%;
+        @include for-tablet {
+          padding: 56px 0px 56px 36px;
+        }       
+        @include for-phone {
+          padding: 40px 24px 40px 24px;
+        }               
+      }
+      .banner_backgroundImageWrapper {
+        position: initial;
+        display: block;
+        height: auto;
+        width: 100%;
+        @include for-phone {
+          height: auto !important;
+          padding: 0px 24px;
+        }               
 
-				.banner_backgroundImage {
-					height: 240px;
-					width: 100%;
-					@include for-tablet {
-						height: 158px;
-					}													
-					@include for-phone {
-						height: 80px;
-					}																		
-				}
-			}
-		}		
-	}
+        .banner_backgroundImage {
+          height: 240px;
+          width: 100%;
+          @include for-tablet {
+            height: 158px;
+          }                         
+          @include for-phone {
+            height: 80px;
+          }                                   
+        }
+      }
+    }   
+  }
 }

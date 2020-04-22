@@ -112,7 +112,7 @@
       <div class="Footer__Copyright">
         <div class="Footer__Content Rte">
           {{ section.settings.copyright }}
-          <p>© {{ "now" | date: "%Y" }} {{ 'footer.copyright.text' | t }} <a class="link-term-of-use" href="{{ section.settings.terms_of_use }}">Terms of Use</a> — <a href="{{ section.settings.policy }}">Privacy Policy</a></p>
+          <p>© {{ "now" | date: "%Y" }} {{ 'footer.copyright.text' | t }}<br><a class="link-term-of-use" href="{{ section.settings.terms_of_use }}">Terms of Use</a> — <a href="{{ section.settings.policy }}">Privacy Policy</a></p>
         </div>
       </div>
       {%- if section.settings.show_payment_methods -%}
