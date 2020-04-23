@@ -5,7 +5,7 @@
         {%- for block in section.blocks -%}
           {%- assign collection = collections[block.settings.collection] -%}
           {%- assign collection_description = block.settings.collection_description -%}
-            <div class="Highlights_products_item product_{{ collection.title | downcase }}" id="collection_item_{{ section.id }}" data-id="{{ collection.id }}">
+            <div class="Highlights_products_item product_{{ collection.title | downcase }}" id="collection_item_{{ collection.id }}" data-id="{{ collection.id }}">
               <div class="Highlights_products_content">
                 <p class="Highlights_products_name">{{- collection.title -}}</p>
                 <p class="Highlights_products_sub_name">{{- collection.description -}}</p>
@@ -27,10 +27,8 @@
 
   <div class="collection_area">
     <div class="collecton_views">
-        {{ collection_items }}
-    </div>    
-    
-
+      {{ collection_items }}
+    </div>
   </div>
 
 
@@ -51,7 +49,7 @@
       initProductsSlider();
     });
 
-    $("#section-{{ section.id }}").find(".Highlights_products_item").click( function () {
+    $("#section-{{ section.id }}").find(".Highlights_products_item").on('click', function () {
       var id = $(this).attr("data-id");
       $(".collection_view").addClass("hide");
       $(".collection_view").removeClass("show");
@@ -211,7 +209,9 @@
           }
         }
       ]
-    });    
+    }).on('afterChange', function(event, slick, currentSlide){
+      $('.Highlights_products_item.slick-current').trigger('click');
+    });
   }
 </script>
 

@@ -153,7 +153,7 @@
     </div>
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/7497651.js"></script>
 
-    <div id="modal-notify-available" class="Modal Modal-Popup-Subscription Modal--address Modal--small" aria-hidden="true" role="dialog" data-scrollable>
+    <div id="modal-product-subscription" class="Modal Modal-Popup-Subscription Modal--address Modal--small" aria-hidden="true" role="dialog" data-scrollable>
       <button class="Modal__Close Modal__Close--outside" data-action="close-modal">{%- render 'icon' with 'close' -%}</button>
 
       <header class="Modal__Header">
@@ -170,13 +170,14 @@
 
           <div class="Form__Item">
             <div class="Form__CheckboxWrapper">
-              <input type="checkbox" class="Form__Checkbox" name="cbmd_news" id="cbmd_news" value="0">
+              <input type="checkbox" class="Form__Checkbox" name="cbmd_news" id="cbmd_news[product-subscription]" value="0">
               {% render 'icon' with 'checkmark_cbmd' %}
-              <label for="cbmd_news">{{ 'overview.news_title' | t }}</label>
+
+              <label for="cbmd_news[product-subscription]">{{ 'overview.news_title' | t }}</label>
             </div>
           </div>
 
-          <button type="submit" class="Button Button--cbd Button--red">{{ 'overview.notify_me' | t }}</button>        
+          <input type="submit" class="Button Button--cbd Button--red" value="{{ 'overview.notify_me' | t }}">
         </form>
       </div>
     </div>
@@ -185,26 +186,30 @@
       <button class="Modal__Close Modal__Close--outside" data-action="close-modal">{%- render 'icon' with 'close' -%}</button>
 
       <header class="Modal__Header">
-        <h3 class="Modal__Title Heading u-h2">Thank you for your interest.<br/>We welcome the opportunity to work with you.</h3>
-        <p class="Modal__Description">{{ 'overview.email.description' | t }}</p>
+        <h3 class="Modal__Title Heading u-h2" style="margin-bottom: 8px;">Thank you for your interest.</h3>
+        <h3 class="Modal__Title Heading u-h2">We welcome the opportunity to work with you.</h3>
+        <!-- <p class="Modal__Description">{{ 'overview.email.description' | t }}</p> -->
       </header>
 
       <div class="Modal__Content">
 
         <form id="healthcare-providers">
           <div class="Form__Item">
-            <input type="email" class="Form__Input Input--cbd" name="email" value="" placeholder="{{ 'overview.email.placeholder' | t }}">
+            <input type="email" class="Form__Input Input--cbd" name="email" value="" placeholder="Email address">
           </div>
 
           <div class="Form__Item">
             <div class="Form__CheckboxWrapper">
-              <input type="checkbox" class="Form__Checkbox" name="cbmd_news" id="cbmd_news" value="0">
+              <input type="checkbox" class="Form__Checkbox" name="cbmd_news" id="cbmd_news[healthcare-providers]" value="0">
               {% render 'icon' with 'checkmark_cbmd' %}
-              <label for="cbmd_news">{{ 'overview.news_title' | t }}</label>
+
+              <label for="cbmd_news[healthcare-providers]">Send me CBMD news and updates.</label>
             </div>
           </div>
 
-          <button type="submit" class="Button Button--cbd Button--red">{{ 'overview.notify_me' | t }}</button>        
+          <input type="submit" class="Button Button--cbd Button--red" value="Submit">
+
+          <p style="margin-top: 8px;">CBMD™ respects your privacy. We do not sell or distribute email addresses.</p>
         </form>
       </div>
     </div>
@@ -226,13 +231,14 @@
 
           <div class="Form__Item">
             <div class="Form__CheckboxWrapper">
-              <input type="checkbox" class="Form__Checkbox" name="cbmd_news" id="cbmd_news" value="0">
+              <input type="checkbox" class="Form__Checkbox" name="cbmd_news" id="cbmd_news[general-newsletter]" value="0">
               {% render 'icon' with 'checkmark_cbmd' %}
-              <label for="cbmd_news">{{ 'overview.news_title' | t }}</label>
+
+              <label for="cbmd_news[general-newsletter]">{{ 'overview.news_title' | t }}</label>
             </div>
           </div>
 
-          <button type="submit" class="Button Button--cbd Button--red">{{ 'overview.notify_me' | t }}</button>        
+          <input type="submit" class="Button Button--cbd Button--red" value="{{ 'overview.notify_me' | t }}">
         </form>
       </div>
     </div>

@@ -1203,7 +1203,7 @@
             "type": "item",
             "settings": {
               "heading": "For customers",
-              "description": "<p>Email: <a href=\"mailto:support@cbmd.com\" data-action=\"open-modal\" aria-controls=\"modal-notify-available\" class=\"hyper_link\">support@cbmd.com<\/a><\/p>\n<p>Phone: <a href=\"tel:888.678.CBMD%20(2263)\" data-rel=\"external\" class=\"hyper_link\">888.678.CBMD (2263)<\/a><\/p>\n<p><a href=\"\/pages\/our-science?q=faq\" class=\"hyper_link\"> Frequently asked questions<\/a><\/p>\n<p class=\"description\">\nCustomer support is available from 9am and 5pm PST<br>Monday through Friday, excluding holidays<br>Please allow 1-2 business days for a response<\/p>",
+              "description": "<p>Email: <a href=\"mailto:support@cbmd.com\" data-action=\"open-modal\" aria-controls=\"modal-product-subscription\" class=\"hyper_link\">support@cbmd.com<\/a><\/p>\n<p>Phone: <a href=\"tel:888.678.CBMD%20(2263)\" data-rel=\"external\" class=\"hyper_link\">888.678.CBMD (2263)<\/a><\/p>\n<p><a href=\"\/pages\/our-science?q=faq\" class=\"hyper_link\"> Frequently asked questions<\/a><\/p>\n<p class=\"description\">\nCustomer support is available from 9am and 5pm PST<br>Monday through Friday, excluding holidays<br>Please allow 1-2 business days for a response<\/p>",
               "button_name": "",
               "button_link": ""
             }
