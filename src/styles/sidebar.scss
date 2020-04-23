@@ -40,7 +40,9 @@
   .SidebarMenu__Nav {
     > .Collapsible:first-child {
       @include for-phone {
-        display: none;
+        button, div {
+          display: none;
+        }
       }
     }
 

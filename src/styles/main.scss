@@ -413,3 +413,16 @@ section {
 	}
 }
 
+.only-for-phone {
+	display: none;
+	@include for-phone {
+		display: block;
+	}
+}
+
+.only-for-tablet {
+	display: none;
+	@include for-tablet {
+		display: block;
+	}
+}

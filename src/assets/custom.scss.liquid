@@ -462,6 +462,18 @@ section {
     .Modal-Popup-Subscription .Modal__Content form .Form__Item .Form__CheckboxWrapper label {
       cursor: pointer; }
 
+.only-for-phone {
+  display: none; }
+  @media (max-width: 731px) {
+    .only-for-phone {
+      display: block; } }
+
+.only-for-tablet {
+  display: none; }
+  @media (min-width: 732px) and (max-width: 1279px) {
+    .only-for-tablet {
+      display: block; } }
+
 #sidebar-menu {
   width: 100%; }
   #sidebar-menu .Drawer__Content:before {
@@ -484,7 +496,7 @@ section {
   #sidebar-menu .SidebarMenu__Nav--secondary {
     display: none; }
   @media (max-width: 731px) {
-    #sidebar-menu .SidebarMenu__Nav > .Collapsible:first-child {
+    #sidebar-menu .SidebarMenu__Nav > .Collapsible:first-child button, #sidebar-menu .SidebarMenu__Nav > .Collapsible:first-child div {
       display: none; } }
   #sidebar-menu .SidebarMenu__Nav .Collapsible__Plus {
     display: none; }
