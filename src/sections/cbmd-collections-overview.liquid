@@ -50,16 +50,20 @@
     });
 
     $("#section-{{ section.id }}").find(".Highlights_products_item").on('click', function () {
-      var id = $(this).attr("data-id");
-      $(".collection_view").addClass("hide");
-      $(".collection_view").removeClass("show");
-      var view = $(".collection_item_"+id).removeClass("hide");
-      $(".collection_item_"+id).addClass("show");
+      if (document.body.clientWidth >= 1280) {
+        var id = $(this).attr("data-id");
+        $(".collection_view").addClass("hide");
+        $(".collection_view").removeClass("show");
+        $(".collection_item_"+id).removeClass("hide");
+        $(".collection_item_"+id).addClass("show");
 
-      $(".tab_line").removeClass("show");
-      $(".tab_line").addClass("hide");
-      $(this).find(".tab_line").addClass("show");
-      $(this).find(".tab_line").removeClass("hide");
+        $(".tab_line").removeClass("show");
+        $(".tab_line").addClass("hide");
+        $(this).find(".tab_line").addClass("show");
+        $(this).find(".tab_line").removeClass("hide");
+      } else {
+        $(this).parents('.Highlights_products_items').slick('slickGoTo', $(this).index(), false);
+      }
     });
     setTimeout(function(){
       let query = getUrlParameter('q');
@@ -209,8 +213,22 @@
           }
         }
       ]
-    }).on('afterChange', function(event, slick, currentSlide){
-      $('.Highlights_products_item.slick-current').trigger('click');
+    })
+    .on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+      var slide = $("#section-{{ section.id }}").find(".Highlights_products_container").find('.Highlights_products_items').find('.Highlights_products_item:eq(' + nextSlide + ')');
+
+      var id = slide.attr("data-id");
+      $(".collection_view").addClass("hide");
+      $(".collection_view").removeClass("show");
+      $(".collection_item_"+id).removeClass("hide");
+      $(".collection_item_"+id).addClass("show");
+
+      $(".tab_line").removeClass("show");
+      $(".tab_line").addClass("hide");
+      $(slide).find(".tab_line").addClass("show");
+      $(slide).find(".tab_line").removeClass("hide");
+
     });
   }
 </script>
