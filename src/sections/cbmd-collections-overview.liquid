@@ -1,5 +1,5 @@
 <section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="cbmd">  
-  <div class="Highlights_products_container Highlights_container">
+  <div class="Highlights_products_container Highlights_container with-mobile-swipe-notice">
     <div class="Highlights_products">
       <div class="Highlights_products_items">
         {%- for block in section.blocks -%}
@@ -16,7 +16,8 @@
             </div>
         {%- endfor -%}
       </div>
-    </div>      
+    </div>
+    <div class="mobile-swipe-notice">Swipe <img src="{{ 'mobile-swipe-icon.svg' | asset_url }}" /></div> 
   </div>
   {%- capture collection_items -%}
     {%- for block in section.blocks -%}
@@ -24,18 +25,25 @@
       {%- render 'collection-view', block: block, collection: collection, index: forloop.index -%}
     {%- endfor -%}
   {%- endcapture -%}
-
   <div class="collection_area">
-    <div class="collecton_views">
+    <div class="collecton_views with-mobile-swipe-notice">
       {{ collection_items }}
     </div>
   </div>
-
-
-</section>  
+</section>
 <style>
+  {%- if section.settings.background_color -%}
   .Highlights_products_container {
     background: {{section.settings.background_color}};
+  }
+  {%- endif -%}
+  .Highlights_products_container.with-mobile-swipe-notice .mobile-swipe-notice {
+    position: absolute;
+    bottom: 14px;
+    pointer-events: none;
+  }
+  .collecton_views.with-mobile-swipe-notice .mobile-swipe-notice {
+    margin-top: 0;
   }
 </style>
 
@@ -72,7 +80,7 @@
         var element = document.querySelector("#section-cbmd-collections-overview");
 
         // scroll to element
-        element.scrollIntoView();        
+        element.scrollIntoView();
       }
     }, 1500);
 
@@ -107,20 +115,18 @@
 
       if (breakpoint != 0) {
         if (window.innerWidth > breakpoint) {
-          if ($(this).find(".slick-list").length > 0) 
+          if ($(this).find(".slick-list").length > 0) {
             $(this).slick('unslick');
+          }
         }
         else {
-          if ($(this).find(".slick-list").length == 0) 
+          if ($(this).find(".slick-list").length == 0) {
             initProductSlick($(this));
+          }
         }
-
       }
-
     });
   }
-
-
 
   function initCollectionsSlider() {
     if (window.innerWidth > 1096) {

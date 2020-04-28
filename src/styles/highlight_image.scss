@@ -458,3 +458,29 @@
     }
   }  
 }
+
+
+.mobile-swipe-notice {
+  display: none;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #EB161E;
+  margin-top: 15px;
+  img {
+    margin-left: 4px;
+  }
+}
+
+.with-mobile-swipe-notice {
+  position: relative;
+  @include for-phone {
+    .mobile-swipe-notice {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -400,6 +400,9 @@ section {
 			.Form__Item {
 				.Input--cbd {
 					width: 100%;
+					&.Input--textarea {
+						height: 220px;
+					}
 				}
 				.Form__CheckboxWrapper {
 					cursor: pointer;

@@ -104,7 +104,7 @@
   line-height: 24px;
   letter-spacing: -0.01em; }
 
-.Heading, .Highlights_stats_container .Highlights_first .Highlights_heading, .Highlights_image_container .Highlights_item .Highlights_item_content .Highlights_heading, .Highlights_multilnk_container .Highlights_multilnk_item a .Highlights_multilnk_item_content .Highlights_multilnk_item_body p, .Highlights_providers_container .Highlights_providers_row .Highlights_heading, .Highlights_providers_container .Highlights_providers_row .Highlights_providers .Highlights_providers_items .Highlights_providers_item .Highlights_providers_content .Highlights_providers_name, .Highlights_products_container .Highlights_heading, .Highlights_products_container .Highlights_products_items .Highlights_products_item .Highlights_products_content .Highlights_for, .cbmd_slider_circle_container .heading, .cbmd_book_container .book_cover_area .book_container .book_cover .front .cover .open_book a, .cbmd_book_container .book_contents_area .heading, .cbmd_slider_rect_container .cbmd_slider_rec_items .item .content .name, .cbmd_faq_container .faq_area .faq_item .sub_title, #section-cbmd-collections-overview .collecton_views .collection_view .collection_products .collection_label, .cbmd_instagram_container .heading, .cbmd_instagram_container .hashtag, #section-footer .Container .Footer__Inner_row .Footer__Inner .Footer__Block .is-active {
+.Heading, .Highlights_stats_container .Highlights_first .Highlights_heading, .Highlights_image_container .Highlights_item .Highlights_item_content .Highlights_heading, .Highlights_multilnk_container .Highlights_multilnk_item a .Highlights_multilnk_item_content .Highlights_multilnk_item_body p, .Highlights_providers_container .Highlights_providers_row .Highlights_heading, .Highlights_providers_container .Highlights_providers_row .Highlights_providers .Highlights_providers_items .Highlights_providers_item .Highlights_providers_content .Highlights_providers_name, .Highlights_products_container .Highlights_heading, .Highlights_products_container .Highlights_products_items .Highlights_products_item .Highlights_products_content .Highlights_for, .cbmd_slider_circle_container .heading, .cbmd_book_container .book_cover_area .book_container .book_cover .front .cover .open_book a, .cbmd_book_container .book_contents_area .heading, .cbmd_slider_rect_container .cbmd_slider_rec_items .item .content .name, .cbmd_faq_container .faq_area .faq_item .sub_title, #section-cbmd-collections-overview .collecton_views .collection_view .collection_item .collection_content .collection_label, #section-cbmd-collections-overview .collecton_views .collection_view .collection_products .collection_label, .cbmd_instagram_container .heading, .cbmd_instagram_container .hashtag, #section-footer .Container .Footer__Inner_row .Footer__Inner .Footer__Block .is-active {
   font-family: Graphik;
   font-style: normal;
   font-weight: 600;
@@ -457,6 +457,8 @@ section {
       color: #000000; }
   .Modal-Popup-Subscription .Modal__Content form .Form__Item .Input--cbd {
     width: 100%; }
+    .Modal-Popup-Subscription .Modal__Content form .Form__Item .Input--cbd.Input--textarea {
+      height: 220px; }
   .Modal-Popup-Subscription .Modal__Content form .Form__Item .Form__CheckboxWrapper {
     cursor: pointer; }
     .Modal-Popup-Subscription .Modal__Content form .Form__Item .Form__CheckboxWrapper label {
@@ -1269,6 +1271,26 @@ section {
 #shopify-section-cbmd-highlight-image-2 .Highlights_image_right .Highlights_second .highlight_image {
   -o-object-position: center;
      object-position: center; }
+
+.mobile-swipe-notice {
+  display: none;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #EB161E;
+  margin-top: 15px; }
+  .mobile-swipe-notice img {
+    margin-left: 4px; }
+
+.with-mobile-swipe-notice {
+  position: relative; }
+  @media (max-width: 731px) {
+    .with-mobile-swipe-notice .mobile-swipe-notice {
+      display: flex;
+      align-items: center; } }
 
 .Highlights_multilnk_container {
   max-width: 1920px;
@@ -2556,6 +2578,13 @@ section {
           #section-cbmd-collections-overview .collecton_views .collection_view .collection_item .collection_content {
             padding-top: 40px;
             max-width: 256px; } }
+        #section-cbmd-collections-overview .collecton_views .collection_view .collection_item .collection_content .collection_label {
+          color: #EB161E;
+          margin-bottom: 13px;
+          display: none; }
+          @media (min-width: 1280px) {
+            #section-cbmd-collections-overview .collecton_views .collection_view .collection_item .collection_content .collection_label {
+              display: block; } }
         #section-cbmd-collections-overview .collecton_views .collection_view .collection_item .collection_content .collection_title {
           max-width: 460px;
           margin-bottom: 16px; }
@@ -2588,7 +2617,11 @@ section {
           padding-left: 24px; } }
       #section-cbmd-collections-overview .collecton_views .collection_view .collection_products .collection_label {
         color: #EB161E;
-        margin-bottom: 24px; }
+        margin-bottom: 24px;
+        display: block; }
+        @media (min-width: 1280px) {
+          #section-cbmd-collections-overview .collecton_views .collection_view .collection_products .collection_label {
+            display: none; } }
       #section-cbmd-collections-overview .collecton_views .collection_view .collection_products .collection_notify {
         margin-top: 56px; }
         @media (min-width: 732px) and (max-width: 1279px) {
@@ -2596,7 +2629,7 @@ section {
             margin-top: 40px; } }
         @media (max-width: 731px) {
           #section-cbmd-collections-overview .collecton_views .collection_view .collection_products .collection_notify {
-            margin-top: 40px; } }
+            margin-top: 26px; } }
       #section-cbmd-collections-overview .collecton_views .collection_view .collection_products .collection_items {
         display: flex;
         align-items: center;

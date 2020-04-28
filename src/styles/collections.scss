@@ -95,6 +95,16 @@
 						max-width: 256px;
 					}
 
+					.collection_label {
+						@extend %text-16-600;
+						color: $red-color;
+						margin-bottom: 13px;
+						display: none;
+						@include for-desktop {
+							display: block;
+						}
+					}
+
 					.collection_title {
 						max-width: 460px;
 						@extend %text-48-600;
@@ -143,6 +153,10 @@
 					@extend %text-16-600;
 					color: $red-color;
 					margin-bottom: 24px;
+					display: block;
+					@include for-desktop {
+						display: none;
+					}
 				}
 				.collection_notify {
 					margin-top: 56px;
@@ -150,7 +164,7 @@
 						margin-top: 40px;
 					} 					
 					@include for-phone {    
-						margin-top: 40px;
+						margin-top: 26px;
 					}  						
 				}
 				.collection_items {
