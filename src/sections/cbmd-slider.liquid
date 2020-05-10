@@ -41,10 +41,10 @@
               </div>
 
               <div class="highlight_products_images">
-                <img class="highlight_products_image highlight_products_image_main" src="{{ picture | img_url: 'master' }}" />
                 {%- if picture_hover != blank -%}
                   <img class="highlight_products_image highlight_products_image_hover" src="{{ picture_hover | img_url: 'master' }}" />
                 {%- endif -%}
+                <img class="highlight_products_image highlight_products_image_main" src="{{ picture | img_url: 'master' }}" />
               </div>
 
               <div class="Highlights_products_content">
@@ -127,7 +127,15 @@
           }
         }
       ]
-    });    
+    })
+    .on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      let count = $("#section-{{ section.id }}").find('.Highlights_products_items .Highlights_products_item').length;
+      if (count == nextSlide + 1) {
+        $("#section-{{ section.id }}").addClass('slick-end');
+      } else {
+        $("#section-{{ section.id }}").removeClass('slick-end');
+      }
+    });
   }
 </script>
 

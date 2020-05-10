@@ -40,7 +40,7 @@
   {%- endif -%}
   #section-{{section.id}} .Highlights_products_container.with-mobile-swipe-notice .mobile-swipe-notice {
     position: absolute;
-    bottom: 14px;
+    bottom: 20px;
     pointer-events: none;
   }
   #section-{{section.id}} .collecton_views.with-mobile-swipe-notice .mobile-swipe-notice {
@@ -236,6 +236,12 @@
       $(slide).find(".tab_line").addClass("show");
       $(slide).find(".tab_line").removeClass("hide");
 
+      let count = $("#section-{{ section.id }}").find('.Highlights_products_items .Highlights_products_item').length;
+      if (count == nextSlide + 1) {
+        $("#section-{{ section.id }}").addClass('slick-end');
+      } else {
+        $("#section-{{ section.id }}").removeClass('slick-end');
+      }
     });
   }
 </script>
