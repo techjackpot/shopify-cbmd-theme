@@ -393,8 +393,9 @@
               "product_name": "RAW",
               "product_sub_name": "Simply CBD",
               "sub_heading": "Formulated for",
-              "product_description": "Customization\nInflammation\nChronic pain\nCognition",
-              "picture": "shopify:\/\/shop_images\/cbmd-raw-cbd_2x_c976c3c7-2d27-4ac6-9b43-c543a6e31cda.jpg",
+              "product_description": "Customization, Chronic pain,<br>\nInflammation, Cognition",
+              "picture": "shopify:\/\/shop_images\/RAW_Caps.png",
+              "picture_hover": "shopify:\/\/shop_images\/cbmd-types_2x_59097ba7-ff1b-4d1b-a6eb-42a0a2dcbf43.jpg",
               "button_name": "Learn more",
               "button_link": "shopify:\/\/pages\/overview"
             }
@@ -405,8 +406,9 @@
               "product_name": "PMT",
               "product_sub_name": "Pain Support",
               "sub_heading": "Formulated for",
-              "product_description": "Chronic pain\nInflammation\nStiffness\nMigraines",
-              "picture": "shopify:\/\/shop_images\/cbmd-pmt-cbd_2x_22f02dd0-f3f6-4380-a995-0b43128848ac.jpg",
+              "product_description": "Chronic pain, Stiffness,<br>\nInflammation, Migraines",
+              "picture": "shopify:\/\/shop_images\/PMT_Tincture.png",
+              "picture_hover": "shopify:\/\/shop_images\/cbmd-cannabidiol_2x_33464af0-1a7c-4f77-8169-1202b392f9f6.jpg",
               "button_name": "Learn more",
               "button_link": "shopify:\/\/pages\/overview"
             }
@@ -417,8 +419,9 @@
               "product_name": "PSY",
               "product_sub_name": "Mind Balance",
               "sub_heading": "Formulated for",
-              "product_description": "Anxiety \nDepression\nInsomnia<br>\nJet lag",
-              "picture": "shopify:\/\/shop_images\/cbmd-psy-cbd_2x_8dcba89a-a38a-4f06-9d0f-2a6325f0c07f.jpg",
+              "product_description": "Anxiety, Depression,<br>\nInsomnia, Jet lag",
+              "picture": "shopify:\/\/shop_images\/PSY_Anx_Caps.png",
+              "picture_hover": "shopify:\/\/shop_images\/cbmd-dosing_2x_7cfbf35c-f124-4217-b1ad-4938ec5fe846.jpg",
               "button_name": "Learn more",
               "button_link": "shopify:\/\/pages\/overview"
             }
@@ -429,8 +432,9 @@
               "product_name": "DRM",
               "product_sub_name": "Skin Restore",
               "sub_heading": "Formulated for",
-              "product_description": "Dryness\nInflammation\nSkin texture\nAging",
-              "picture": "shopify:\/\/shop_images\/cbmd-drm-cbd_2x_6f3d5f98-9008-40da-b6b0-2b138c382cb9.jpg",
+              "product_description": "Dryness, Inflammation,<br>\nSkin texture, Aging",
+              "picture": "shopify:\/\/shop_images\/PMT_Tincture.png",
+              "picture_hover": "shopify:\/\/shop_images\/cbmd-bioavailability_2x_6921f7cf-524e-4752-be7b-e14ce93db2e5.jpg",
               "button_name": "Learn more",
               "button_link": "shopify:\/\/pages\/overview"
             }
@@ -444,8 +448,7 @@
         ],
         "settings": {
           "background_color": "#ffffff",
-          "highlight_heading": "Our products",
-          "highlight_title": "Demand more from<br> your CBD."
+          "highlight_heading": "Our products"
         }
       },
       "1586336977121": {
@@ -1068,41 +1071,41 @@
           "1586785946180": {
             "type": "item",
             "settings": {
-              "collection_description": "Customization\nInflammation\nChronic Pain\nCognition",
+              "collection_description": "Customization, Chronic Pain<br>\nInflammation, Cognition",
               "collection": "raw",
               "view_title": "A solid foundation.",
               "view_description": "Created for individuals looking to integrate additive-free CBD into their wellness routines - our RAW product is also an ideal base compound for physicians who want to build customized formulations for their patients.",
-              "background": "shopify:\/\/shop_images\/cbmd-raw_2x_ae66d375-914d-4044-84de-63153d22b6b8.png"
+              "background": "shopify:\/\/shop_images\/cbmd-raw_2x_0408e2e9-72c8-4f70-bd55-7e0c4d576663.png"
             }
           },
           "1586785972587": {
             "type": "item",
             "settings": {
-              "collection_description": "Chronic pain\nInflammation\nStiffness\nMigraines",
+              "collection_description": "Chronic pain, Stiffness<br>\nInflammation, Migraines",
               "collection": "pmt-1",
               "view_title": "A targeted solution.",
               "view_description": "In combination with CBD, select plant-based ingredients and other naturally occurring compounds comprise a formulation designed for discomfort and inflammation.",
-              "background": "shopify:\/\/shop_images\/cbmd-pmt_2x_c1aae9b9-1eb7-44c9-8ce7-f93e73158325.png"
+              "background": "shopify:\/\/shop_images\/cbmd-pmt_2x_286a7287-8a9c-454e-84f3-dcc38d38f991.png"
             }
           },
           "1586785986283": {
             "type": "item",
             "settings": {
-              "collection_description": "Anxiety\nDepression\nInsomnia <br>\nJet lag",
+              "collection_description": "Anxiety, Depression<br>\nInsomnia, Jet lag",
               "collection": "pmt",
               "view_title": "A true equilibrium.",
               "view_description": "With a proprietary blend of CBD and natural bioactive supplements, our PSY line is formulated to achieve equilibrium—targeting tension, sleeplessness, and stress.",
-              "background": "shopify:\/\/shop_images\/cbmd-psy_2x_de4d407c-7f45-4e7b-b0bd-07b669ab72a7.png"
+              "background": "shopify:\/\/shop_images\/cbmd-psy_2x_973d4ef8-03cb-4ef6-872e-8f8788bc51f8.png"
             }
           },
           "1586785995744": {
             "type": "item",
             "settings": {
-              "collection_description": "Dryness\nInflammation\nSkin Texture\nAging",
+              "collection_description": "Dryness, Inflammation<br>\nSkin Texture, Aging",
               "collection": "drm",
               "view_title": "A great reflection.",
               "view_description": "Our team of dermatologic specialists created our DRM line with phytocannabinoid-rich oils and select plant extracts to smooth, soothe, and put back what time takes out.",
-              "background": "shopify:\/\/shop_images\/cbmd-drm_2x_abd59544-6681-4169-a816-d8e1910270e2.png"
+              "background": "shopify:\/\/shop_images\/cbmd-drm_2x_4d2b4506-6f99-4150-b4ed-8d3336801c0c.png"
             }
           }
         },
@@ -1112,7 +1115,10 @@
           "1586785986283",
           "1586785995744"
         ],
-        "settings": {}
+        "settings": {
+          "background_color": "#ffffff",
+          "highlight_heading": "Our products"
+        }
       },
       "collection-list": {
         "type": "collection-list",

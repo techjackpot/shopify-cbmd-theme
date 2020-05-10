@@ -477,6 +477,12 @@
 
 .with-mobile-swipe-notice {
   position: relative;
+  @include for-tablet {
+    .mobile-swipe-notice {
+      display: flex;
+      align-items: center;
+    }
+  }
   @include for-phone {
     .mobile-swipe-notice {
       display: flex;

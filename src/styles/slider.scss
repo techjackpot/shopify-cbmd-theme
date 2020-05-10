@@ -99,17 +99,17 @@
 					color: $black-color;
 					margin-bottom: 0px;
 
-					@include for-tablet {    
+					@include for-tablet {
 						font-size: 48px;
 						line-height: 48px;
 						letter-spacing: -0.03em;
 					}
 
-					@include for-phone {    
+					@include for-phone {
 						font-size: 40px;
 						line-height: 40px;
 					}
-				}				
+				}
 
 				.Highlights_products_sub_name {
 					@extend %text-32-600;
@@ -353,4 +353,156 @@
 
 		}
 	}
+}
+
+.Highlights_products_container_homepage {
+	.Highlights_products_container {
+		.Highlights_products_items {
+			.Highlights_products_item {
+
+				.Highlights_products_content {
+					.Highlights_products_name {
+						font-size: 70px;
+            letter-spacing: -0.03em;
+            @include for-tablet {
+              font-size: 57.3771px;
+              line-height: 1;
+            }
+            @include for-phone {
+              font-size: 59.2673px;
+              line-height: 1;
+            }
+					}
+					.Highlights_products_sub_name {
+						font-size: 28px;
+            @include for-tablet {
+              font-size: 22.9508px;
+              line-height: 26px;
+            }
+            @include for-phone {
+              font-size: 23.7069px;
+              line-height: 27px;
+            }
+					}
+					.Highlights_for {
+						font-size: 18px;
+						font-weight: 500;
+						line-height: 24px;
+						margin-bottom: 0;
+            @include for-tablet {
+              font-size: 14.7541px;
+              line-height: 20px;
+            }
+            @include for-phone {
+              font-size: 15.2402px;
+              line-height: 20px;
+            }
+					}
+					.Highlights_products_exp {
+						width: auto;
+						font-size: 18px;
+						color: #000;
+						font-weight: 500;
+						line-height: 24px;
+            @include for-tablet {
+              font-size: 14.7541px;
+              line-height: 20px;
+            }
+            @include for-phone {
+              font-size: 15.2402px;
+              line-height: 20px;
+            }
+					}
+				}
+
+				.highlight_products_images {
+          margin-top: 32px;
+          margin-bottom: 8px;
+					position: relative;
+					.highlight_products_image_hover {
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				    height: 100%;
+				    object-fit: contain;
+				    background: #fff;
+				    opacity: 0;
+				    transition: all 0.25s ease;
+					}
+          &:hover {
+            .highlight_products_image_hover {
+              opacity: 1;
+            }
+          }
+				}
+			}
+		}
+	}
+}
+
+.Highlights_products_container_overview {
+  .Highlights_products_container {
+    .Highlights_products_items {
+      .Highlights_products_item {
+
+        .Highlights_products_content {
+          .Highlights_products_name {
+            font-size: 71px;
+            letter-spacing: -0.03em;
+            @include for-tablet {
+              font-size: 55.3643px;
+              line-height: 1;
+            }
+            @include for-phone {
+              font-size: 49.4444px;
+              line-height: 1;
+            }
+          }
+          .Highlights_products_sub_name {
+            font-size: 28px;
+            line-height: 32px;
+            @include for-tablet {
+              font-size: 22.1457px;
+              line-height: 25px;
+            }
+            @include for-phone {
+              font-size: 19.7778px;
+              line-height: 23px;
+            }
+          }
+          .Highlights_for {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 24px;
+            margin-bottom: 0;
+            @include for-tablet {
+              font-size: 14.2365px;
+              line-height: 19px;
+            }
+            @include for-phone {
+              font-size: 12.7143px;
+              line-height: 17px;
+            }
+          }
+          .Highlights_products_exp {
+            width: auto;
+            font-size: 18px;
+            color: #000;
+            font-weight: 500;
+            line-height: 24px;
+            @include for-tablet {
+              font-size: 14.2365px;
+              line-height: 19px;
+            }
+            @include for-phone {
+              font-size: 12.7143px;
+              line-height: 17px;
+            }
+          }
+        }
+
+      }
+    }
+  }
 }

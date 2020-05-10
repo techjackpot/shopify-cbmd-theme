@@ -1,7 +1,9 @@
-<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="cbmd">  
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="cbmd" class="Highlights_products_container_homepage">
   <div class="Highlights_products_container Highlights_container with-mobile-swipe-notice">
     <p class="Highlights_heading">{{section.settings.highlight_heading}}</p>
+    {% comment %}
     <p class="Highlights_title">{{section.settings.highlight_title}}</p>
+    {% endcomment %}
     <div class="Highlights_products">
       <p class="Highlights_products_description">{{section.settings.description}}</p>
       <div class="Highlights_products_items">
@@ -11,6 +13,7 @@
           {%- assign product_sub_name = block.settings.product_sub_name -%}
           {%- assign product_description = block.settings.product_description -%}
           {%- assign picture = block.settings.picture -%}
+          {%- assign picture_hover = block.settings.picture_hover -%}
           {%- assign product = all_products[block.settings.product_link] -%}
           {%- assign product_link = block.settings.button_link -%}
           {%- assign product_sub_heading = block.settings.sub_heading  -%}
@@ -30,15 +33,21 @@
               {% endcase %}
 
             <div class="Highlights_products_item">
-              <div class="highlight_product_image_row">
-                <div class="highlight_product_image" style="background-image: url({{ picture | img_url: 'master' }})"></div>
-              </div>
-              
               <div class="Highlights_products_content">
                 <p class="Highlights_products_name">{{- product_name -}}</p>
                 <p class="Highlights_products_sub_name">{{- product_sub_name -}}</p>
                 <p class="Highlights_for">{{- product_sub_heading -}}</p>
                 <p class="Highlights_products_exp">{{- product_description -}}</p>
+              </div>
+
+              <div class="highlight_products_images">
+                <img class="highlight_products_image highlight_products_image_main" src="{{ picture | img_url: 'master' }}" />
+                {%- if picture_hover != blank -%}
+                  <img class="highlight_products_image highlight_products_image_hover" src="{{ picture_hover | img_url: 'master' }}" />
+                {%- endif -%}
+              </div>
+
+              <div class="Highlights_products_content">
                 <a href="{{ product_link }}?q={{ q }}" class="Highlights_products_link Button Button--cbd Button--red">{{- button_name -}}</a>
               </div>
             </div>
@@ -49,11 +58,13 @@
     </div>
     <div class="mobile-swipe-notice">Swipe <img src="{{ 'mobile-swipe-icon.svg' | asset_url }}" /></div>
   </div>
-</section>  
+</section>
 <style>
-  .Highlights_products_container {
+  {%- if section.settings.background_color -%}
+  #section-{{section.id}} .Highlights_products_container {
     background: {{section.settings.background_color}};
   }
+  {%- endif -%}
 </style>
 
 <script type="text/javascript">
@@ -134,11 +145,6 @@
       "type": "text",
       "id": "highlight_heading",
       "label": "Heading"
-    },
-    {
-      "type": "textarea",
-      "id": "highlight_title",
-      "label": "Title"
     }
   ],
   "blocks": [
@@ -160,7 +166,7 @@
           "type": "text",
           "id": "sub_heading",
           "label": "Sub Heading"
-        },        
+        },
         {
           "type": "textarea",
           "id": "product_description",
@@ -172,15 +178,20 @@
           "label": "Picture"
         },
         {
+          "type": "image_picker",
+          "id": "picture_hover",
+          "label": "Hover Picture"
+        },
+        {
           "type": "text",
           "id": "button_name",
           "label": "Button Name"
-        },        
+        },
         {
           "type": "url",
           "id": "button_link",
           "label": "Product"
-        }        
+        }
       ]
     }
   ],    

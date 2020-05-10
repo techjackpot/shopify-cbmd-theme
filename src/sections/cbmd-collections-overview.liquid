@@ -1,5 +1,6 @@
-<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="cbmd">  
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="cbmd" class="Highlights_products_container_overview">  
   <div class="Highlights_products_container Highlights_container with-mobile-swipe-notice">
+    <p class="Highlights_heading">{{section.settings.highlight_heading}}</p>
     <div class="Highlights_products">
       <div class="Highlights_products_items">
         {%- for block in section.blocks -%}
@@ -22,7 +23,7 @@
   {%- capture collection_items -%}
     {%- for block in section.blocks -%}
       {%- assign collection = collections[block.settings.collection] -%}
-      {%- render 'collection-view', block: block, collection: collection, index: forloop.index -%}
+      {%- render 'collection-view-updated', block: block, collection: collection, index: forloop.index -%}
     {%- endfor -%}
   {%- endcapture -%}
   <div class="collection_area">
@@ -33,16 +34,16 @@
 </section>
 <style>
   {%- if section.settings.background_color -%}
-  .Highlights_products_container {
+  #section-{{section.id}} .Highlights_products_container {
     background: {{section.settings.background_color}};
   }
   {%- endif -%}
-  .Highlights_products_container.with-mobile-swipe-notice .mobile-swipe-notice {
+  #section-{{section.id}} .Highlights_products_container.with-mobile-swipe-notice .mobile-swipe-notice {
     position: absolute;
     bottom: 14px;
     pointer-events: none;
   }
-  .collecton_views.with-mobile-swipe-notice .mobile-swipe-notice {
+  #section-{{section.id}} .collecton_views.with-mobile-swipe-notice .mobile-swipe-notice {
     margin-top: 0;
   }
 </style>
@@ -243,6 +244,17 @@
 {
   "name": "Collections",
   "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "highlight_heading",
+      "label": "Heading"
+    }
   ],
   "blocks": [
     {
