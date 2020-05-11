@@ -128,12 +128,11 @@
         }
       ]
     })
-    .on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      let count = $("#section-{{ section.id }}").find('.Highlights_products_items .Highlights_products_item').length;
-      if (count == nextSlide + 1) {
-        $("#section-{{ section.id }}").addClass('slick-end');
+    .on('afterChange', function(event, slick, currentSlide, nextSlide){
+      if ($("#section-{{ section.id }} .Highlights_products_items .slick-slide:last-child").hasClass('slick-active')) {
+        $('#section-{{ section.id }}').addClass('slick-end');
       } else {
-        $("#section-{{ section.id }}").removeClass('slick-end');
+        $('#section-{{ section.id }}').removeClass('slick-end');
       }
     });
   }

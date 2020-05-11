@@ -492,6 +492,9 @@
     margin-left: 4px;
   }
   animation: mobileSwipeNoticePulse 4s linear infinite;
+  @media (min-width: 1024px) {
+    display: none !important;
+  }
 }
 
 .with-mobile-swipe-notice {
@@ -511,14 +514,12 @@
 }
 
 .slick-end {
-  .with-mobile-swipe-notice {
-    .mobile-swipe-notice {
-      img {
-        order: -1;
-        transform: rotate(180deg);
-        margin-right: 4px;
-        margin-left: 0;
-      }
+  .mobile-swipe-notice {
+    img {
+      order: -1;
+      transform: rotate(180deg);
+      margin-right: 4px;
+      margin-left: 0;
     }
   }
 }

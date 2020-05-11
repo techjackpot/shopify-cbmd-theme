@@ -95,7 +95,14 @@
           }
         }
       ]
-    });    
+    })
+    .on('afterChange', function(event, slick, currentSlide, nextSlide){
+      if ($('.cbmd_slider_circle_items .slick-slide:last-child').hasClass('slick-active')) {
+        $('#section-{{ section.id }}').addClass('slick-end');
+      } else {
+        $('#section-{{ section.id }}').removeClass('slick-end');
+      }
+    });
   }
 </script>
 

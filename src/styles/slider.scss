@@ -440,12 +440,18 @@
 				    background: #fff;
 				    opacity: 0;
 				    transition: all 0.4s ease;
+            @include for-phone {
+              display: none;
+            }
 					}
           .highlight_products_image_main {
             opacity: 1;
             transition: all 0.4s ease;
             background: #fff;
             object-fit: contain;
+            @include for-phone {
+              opacity: 1 !important;
+            }
           }
           &:hover {
             .highlight_products_image_hover {
