@@ -41,7 +41,7 @@
 			@include for-tablet {
 				background: $white-color;
 				padding-left: 0px;			
-				height: 906px;
+				height: 930px;
 			}  
 
 			@include for-phone {
@@ -181,32 +181,35 @@
 					display: flex;
 					align-items: flex-end;
 					z-index: 1;
-					margin-top: -85px;
+			    margin-top: -55px;
+			    margin-bottom: 30px;
 					@include for-tablet {
-						margin-top: -95px;
+						margin-top: -70px;
+			    	margin-bottom: 10px;
 					}
 					@include for-phone {
-						margin-top: -90px;
+						margin-top: -85px;
+    				margin-bottom: -10px;
 					}
 					.collection_product {
 						margin-right: 24px;
+						min-width: 200px;
 						&:last-child {
 							margin-right: 0px;
 						}
 						@include for-phone {
-							min-width: 200px;
 						}
 						&.product-topical-cream {
 							@include for-tablet {
 								img {
 									padding-top: 53.03px;
-									height: 493.03px;
+									height: 383.47px;
 								}
 							}
 							@include for-phone {
 								img {
-							    padding-top: 100px;
-							    height: 383.47px;
+							    padding-top: 90px;
+							    height: 356.68px;
 							  }
 							}
 						}
@@ -223,13 +226,13 @@
 							.img_area {
 								img {
 									display: block;
-									margin: 0 auto;
-									max-width: 200px;
+									margin-right: auto;
+									max-width: 160px;
 									@include for-tablet {
-										max-width: 180px;
+										max-width: 140px;
 									}
 									@include for-phone {
-										max-width: 140px;
+										max-width: 130px;
 									}
 								}
 							}

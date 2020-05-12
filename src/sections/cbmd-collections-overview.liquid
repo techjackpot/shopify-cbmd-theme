@@ -130,7 +130,7 @@
   }
 
   function initCollectionsSlider() {
-    if (window.innerWidth > 1280) {
+    if (window.innerWidth >= 1280) {
       if ($("#section-{{ section.id }}").find(".Highlights_products_container").find(".slick-initialized").length > 0) 
         $("#section-{{ section.id }}").find('.Highlights_products_container').find(".Highlights_products_items").slick('unslick');
     }

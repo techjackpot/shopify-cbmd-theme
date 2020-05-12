@@ -154,7 +154,7 @@
 					@include for-tablet {    
 						font-size: 18px;
 						line-height: 24px;
-						height: 96px;
+						// height: 96px;
 					}
 				}
 			}
@@ -430,6 +430,13 @@
           margin-top: 32px;
           margin-bottom: 8px;
 					position: relative;
+          max-width: 190px;
+          @include for-tablet {
+            max-width: 160px;
+          }
+          @include for-phone {
+            max-width: 160px;
+          }
 					.highlight_products_image_hover {
 				    position: absolute;
 				    top: 0;
@@ -449,11 +456,7 @@
             transition: all 0.4s ease;
             background: #fff;
             object-fit: contain;
-            display: block;
-            max-width: 200px;
-            margin-right: 32px;
             @include for-phone {
-              margin-right: 24px;
               opacity: 1 !important;
             }
           }
@@ -466,6 +469,26 @@
             }
           }
 				}
+
+        .Highlights_products_link {
+          width: 190px;
+          @include for-tablet {
+            width: 160px;
+            font-size: 12.2951px;
+            line-height: 20px;
+            padding: 0;
+            line-height: 45.9px;
+            text-align: center;
+          }
+          @include for-phone {
+            width: 160px;
+            font-size: 12.7001px;
+            line-height: 20px;
+            padding: 0;
+            line-height: 47.41px;
+            text-align: center;
+          }
+        }
 			}
 		}
     .mobile-swipe-notice {
