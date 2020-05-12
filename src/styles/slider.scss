@@ -449,7 +449,11 @@
             transition: all 0.4s ease;
             background: #fff;
             object-fit: contain;
+            display: block;
+            max-width: 200px;
+            margin-right: 32px;
             @include for-phone {
+              margin-right: 24px;
               opacity: 1 !important;
             }
           }

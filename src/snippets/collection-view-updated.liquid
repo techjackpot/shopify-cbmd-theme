@@ -18,7 +18,7 @@
     <p class="collection_label">Our products</p>
     <div class="collection_items">
       {%- for product in products -%}
-        <div class="collection_product">
+        <div class="collection_product product-{{ product.title | handle }}">
           <a>
             <div class="img_area">
               <img src="{{ product | img_url: 'master' }}">
