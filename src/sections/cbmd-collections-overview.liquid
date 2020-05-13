@@ -78,12 +78,12 @@
       let query = getUrlParameter('q');
       if (query) {
         $(".product_"+query).trigger("click");
-        var element = document.querySelector("#section-cbmd-collections-overview");
 
         // scroll to element
-        element.scrollIntoView();
+        // var element = document.querySelector("#section-cbmd-collections-overview");
+        // element.scrollIntoView();
       }
-    }, 1500);
+    }, 100);
 
 
   });
