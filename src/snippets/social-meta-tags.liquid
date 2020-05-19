@@ -13,6 +13,10 @@ Validate your Pinterest rich pins
 - https://developers.pinterest.com/rich_pins/validator/
 {%- endcomment -%}
 
+{%- if template.name == 'product' or template.name == 'collection' -%}
+<meta name="robots" content="noindex">
+{%- endif -%}
+
 {%- if template.name == 'product' -%}
   <meta property="og:type" content="product">
   <meta property="og:title" content="{{ product.title | strip_html | escape }}">
