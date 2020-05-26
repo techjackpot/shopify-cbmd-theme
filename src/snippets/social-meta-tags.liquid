@@ -13,9 +13,11 @@ Validate your Pinterest rich pins
 - https://developers.pinterest.com/rich_pins/validator/
 {%- endcomment -%}
 
+{%- comment -%}
 {%- if template.name == 'product' or template.name == 'collection' -%}
 <meta name="robots" content="noindex">
 {%- endif -%}
+{%- endcomment -%}
 
 {%- if template.name == 'product' -%}
   <meta property="og:type" content="product">
